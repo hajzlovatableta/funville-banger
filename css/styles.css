@@ -7,8 +7,11 @@
 /* ─── Navbar ─── */
 .nav-shadow { box-shadow: 0 2px 0 0 rgba(10,45,97,.08); }
 
+/* Height follows the screen width (as before) but never gets thinner than
+   24px, and the cloud always hangs directly under the navbar — no gap. */
 .cloud-edge {
-  bottom: -55px;
+  height: max(24px, 3.889vw);
+  bottom: calc(-1 * min(55px, max(24px, 3.889vw) - 1px));
   z-index: 50;
   transform: scaleY(-1);
 }
@@ -72,6 +75,20 @@
   text-shadow: 2px 3px 0 rgba(10,45,97,.25);
 }
 .hero-title { font-size: clamp(4rem, 10vw, 8rem); }
+
+/* Hero bouncing balls (positions; middle ball truly centred) */
+.hero-ball { bottom: 1rem; }
+.hb-1 { left: 8%; }
+.hb-2 { left: 28%; bottom: 2rem; }
+.hb-3 { left: calc(50% - 3.5rem); bottom: .75rem; }
+.hb-4 { right: 28%; bottom: 2rem; }
+.hb-5 { right: 8%; }
+
+/* Zones bouncing balls */
+.zone-ball { bottom: 1rem; }
+.zb-1 { left: 20%; }
+.zb-2 { left: calc(50% - 2.5rem); bottom: 2rem; }
+.zb-3 { right: 20%; }
 
 
 /* ─── Marquee ─── */
@@ -180,6 +197,43 @@
 .btn-hover:active  { transform: scale(.95); }
 
 
+/* ─── Footer social buttons ───
+   White circle + white icon; on hover the circle fills white and the
+   icon turns footer-navy, with a little lift and a lime cartoon shadow.
+   Icons: Simple Icons (CC0), loaded from jsDelivr. */
+.social-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  transition: background-color .25s ease, color .25s ease,
+              transform .25s cubic-bezier(.16,1,.3,1), box-shadow .25s ease;
+}
+.social-btn:hover,
+.social-btn:focus-visible {
+  background-color: #fff;
+  color: #0A2D61;
+  transform: translateY(-4px);
+  box-shadow: 4px 4px 0 0 #D6DF2D;
+  outline: none;
+}
+.social-btn:active { transform: translateY(-1px) scale(.95); }
+.social-icon {
+  width: 22px;
+  height: 22px;
+  background-color: currentColor;
+  -webkit-mask: var(--icon) center / contain no-repeat;
+          mask: var(--icon) center / contain no-repeat;
+}
+.social-icon-facebook  { --icon: url('https://cdn.jsdelivr.net/npm/simple-icons@16/icons/facebook.svg'); }
+.social-icon-instagram { --icon: url('https://cdn.jsdelivr.net/npm/simple-icons@16/icons/instagram.svg'); }
+
+
 /* ─── Mobile menu ─── */
 #mobile-menu {
   transform: translateY(-100%);
@@ -230,3 +284,140 @@
 .border-3 { border-width: 3px; }
 .border-4 { border-width: 4px; }
 .border-5 { border-width: 5px; }
+
+
+/* ═══════════════════════════════════════════════════════
+   PHONES & TABLETS  (below 1024px)
+   Everything here only applies to smaller screens —
+   the desktop layout above stays exactly as it was.
+   ═══════════════════════════════════════════════════════ */
+
+/* Height of announce bar + navbar (main.js keeps this exact) */
+:root { --nav-offset: 108px; }
+@media (max-width: 639px) { :root { --nav-offset: 124px; } }
+
+/* Dots under swipeable rows — phones & tablets only */
+.swipe-dots { display: none; }
+
+@media (max-width: 1023px) {
+
+  /* ── Hero: child's photo on top, text underneath ── */
+  section.section-hero {
+    --hero-photo-h: clamp(300px, min(46vw + 200px, 55vh), 560px);
+    align-items: flex-start;
+    padding-top: calc(var(--nav-offset) + var(--hero-photo-h) - 84px);
+    padding-bottom: 168px;
+  }
+  .section-hero .hero-bg-img {
+    top: calc(var(--nav-offset) - 16px);
+    bottom: auto;
+    height: var(--hero-photo-h);
+    background-position: 50% 20%;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 60%, transparent 100%);
+            mask-image: linear-gradient(to bottom, #000 0%, #000 60%, transparent 100%);
+  }
+  .section-hero .hero-overlay { background: rgba(99,204,245,.06); }
+  .hero-content > div { margin-left: auto; margin-right: auto; text-align: center; }
+  .hero-ctas { justify-content: center; }
+
+  /* bouncing balls: evenly spaced, slightly smaller */
+  .hero-ball { right: auto !important; }
+  .hb-1 { left: calc(10% - 2.5rem); }
+  .hb-2 { left: calc(30% - 3rem); }
+  .hb-3 { left: calc(50% - 3.5rem); }
+  .hb-4 { left: calc(70% - 3rem); }
+  .hb-5 { left: calc(90% - 2.5rem); }
+  .hero-ball > div { transform: scale(.8); transform-origin: 50% 100%; }
+
+  /* ── Swipeable card rows (Why, Zones, Parties, Pricing, Reviews) ── */
+  .swipe-row {
+    position: relative;
+    display: flex !important;
+    align-items: stretch !important;
+    gap: 1.25rem !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 1.5rem;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding: 1.75rem 1.5rem;
+  }
+  .swipe-row::-webkit-scrollbar { display: none; }
+  .swipe-row > * {
+    flex: 0 0 min(44%, 360px);
+    scroll-snap-align: start;
+    margin-top: 0 !important;
+  }
+  .pricing-grid.swipe-row { padding-top: 120px; padding-bottom: 3.5rem; }   /* room for avatars + soft shadow */
+  .pricing-grid.swipe-row + .swipe-dots { margin-top: -1.25rem; }
+
+  .swipe-dots {
+    display: flex;
+    justify-content: center;
+    gap: .55rem;
+    margin-top: .25rem;
+  }
+  .swipe-dots button {
+    position: relative;
+    width: 11px;
+    height: 11px;
+    padding: 0;
+    border-radius: 999px;
+    border: 2px solid #0A2D61;
+    background: transparent;
+    cursor: pointer;
+    transition: width .35s cubic-bezier(.16,1,.3,1), background-color .25s ease;
+  }
+  .swipe-dots button::after { content: ''; position: absolute; inset: -9px -5px; }  /* bigger tap area */
+  .swipe-dots button.active { width: 30px; background: #0A2D61; }
+  .swipe-dots-light button { border-color: #fff; }
+  .swipe-dots-light button.active { background: #fff; }
+}
+
+/* Touch screens: no "stuck" hover lift on swiped cards */
+@media (hover: none) {
+  .swipe-row > .card-lift:hover,
+  .swipe-row > .pricing-card:hover { transform: none !important; }
+}
+
+/* ── Phones ── */
+@media (max-width: 639px) {
+  .swipe-row > * { flex-basis: 86%; }
+
+  /* hero shapes move around the photo so they never sit on the text */
+  .hs-tri    { top: 17% !important; left: auto !important; right: 3%; width: 52px !important; height: 52px !important; }
+  .hs-circle { top: 31% !important; left: auto !important; right: 9%; width: 34px !important; height: 34px !important; }
+  .hs-star   { width: 64px !important; height: 64px !important; }
+
+  .hero-ball > div { transform: scale(.56); }
+  .zone-ball > div { transform: scale(.75); transform-origin: 50% 100%; }
+}
+
+/* phones: keep the "Otvorené denne" badge on one line */
+@media (max-width: 639px) {
+  .hero-content .hero-badge { font-size: .75rem; padding-left: .9rem; padding-right: .9rem; }
+}
+@media (max-width: 389px) {
+  .hero-content .hero-badge { font-size: .7rem; padding-left: .7rem; padding-right: .7rem; gap: .4rem; }
+}
+
+/* tablets: a bit less empty space above the wavy section edges */
+@media (max-width: 1023px) {
+  .section-std   { padding-bottom: 128px; }
+  .section-mid   { padding-bottom: 128px; }
+  .section-tall  { padding-bottom: 144px; }
+}
+
+@media (max-width: 767px) {
+  /* phones: less empty space above the wavy section edges */
+  .section-stats { padding-top: 84px; padding-bottom: 64px; }
+  .section-std   { padding-top: 72px; padding-bottom: 112px; }
+  .section-mid   { padding-top: 80px; padding-bottom: 112px; }
+  .section-tall  { padding-top: 88px; padding-bottom: 136px; }
+  /* waves keep a visible height on narrow screens */
+  .bridge-svg, .bridge-svg-plain { height: 40px; }
+}

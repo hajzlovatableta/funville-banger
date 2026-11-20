@@ -24,7 +24,7 @@ const hamBars    = document.querySelectorAll('.ham-bar')
 function openMobileMenu() {
   mobileMenu.classList.add('open')
   hamburger.setAttribute('aria-expanded', 'true')
-  hamburger.setAttribute('aria-label', 'Close menu')
+  hamburger.setAttribute('aria-label', 'Zavrieť menu')
   hamBars[0].style.cssText = 'transform:rotate(45deg) translate(4px,5px);'
   hamBars[1].style.cssText = 'opacity:0;'
   hamBars[2].style.cssText = 'transform:rotate(-45deg) translate(4px,-5px);'
@@ -32,7 +32,7 @@ function openMobileMenu() {
 function closeMobileMenu() {
   mobileMenu.classList.remove('open')
   hamburger.setAttribute('aria-expanded', 'false')
-  hamburger.setAttribute('aria-label', 'Open menu')
+  hamburger.setAttribute('aria-label', 'Otvoriť menu')
   hamBars.forEach(b => b.style.cssText = '')
 }
 hamburger.addEventListener('click', () =>
@@ -53,8 +53,70 @@ const revealObserver = new IntersectionObserver((entries) => {
   })
 }, { threshold: 0.1, rootMargin: '-40px' })
 
+// Phones & tablets: cards inside a swipeable row reveal together when the
+// row scrolls into view (otherwise the peeking next card would stay hidden).
+const smallScreen = window.matchMedia('(max-width: 1023px)')
+const inSwipeRow  = el => el.parentElement && el.parentElement.classList.contains('swipe-row')
+
 document.querySelectorAll('.reveal, .reveal-scale, .reveal-left, .reveal-right').forEach(el => {
+  if (smallScreen.matches && inSwipeRow(el)) return
   revealObserver.observe(el)
+})
+
+if (smallScreen.matches) {
+  const rowObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return
+      Array.from(entry.target.children).forEach(card => {
+        const delay = parseInt(card.dataset.delay || '0', 10)
+        setTimeout(() => card.classList.add('revealed'), delay)
+      })
+      rowObserver.unobserve(entry.target)
+    })
+  }, { threshold: 0.15 })
+  document.querySelectorAll('.swipe-row').forEach(row => rowObserver.observe(row))
+}
+// If the window is resized down to tablet/phone size, make sure no card stays hidden
+smallScreen.addEventListener && smallScreen.addEventListener('change', e => {
+  if (e.matches) document.querySelectorAll('.swipe-row > *').forEach(c => c.classList.add('revealed'))
+})
+
+
+/* ─── Swipeable rows: dots under each row (phones & tablets) ─── */
+document.querySelectorAll('.swipe-row').forEach(row => {
+  const cards = Array.from(row.children)
+  const dots  = document.createElement('div')
+  dots.className = 'swipe-dots' + (row.dataset.dots === 'light' ? ' swipe-dots-light' : '')
+
+  const buttons = cards.map((card, i) => {
+    const b = document.createElement('button')
+    b.type = 'button'
+    b.setAttribute('aria-label', 'Zobraziť kartu ' + (i + 1) + ' z ' + cards.length)
+    b.addEventListener('click', () => {
+      row.scrollTo({ left: card.offsetLeft - cards[0].offsetLeft, behavior: 'smooth' })
+    })
+    dots.appendChild(b)
+    return b
+  })
+  row.after(dots)
+
+  let ticking = false
+  function setActive() {
+    ticking = false
+    const start = cards[0].offsetLeft
+    let active = 0, best = Infinity
+    cards.forEach((card, i) => {
+      const d = Math.abs(card.offsetLeft - start - row.scrollLeft)
+      if (d < best) { best = d; active = i }
+    })
+    if (row.scrollLeft + row.clientWidth >= row.scrollWidth - 4) active = cards.length - 1
+    buttons.forEach((b, i) => b.classList.toggle('active', i === active))
+  }
+  row.addEventListener('scroll', () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(setActive) }
+  }, { passive: true })
+  window.addEventListener('resize', setActive)
+  setActive()
 })
 
 
@@ -141,6 +203,8 @@ const nav = document.querySelector('nav')
 function updateNavTop() {
   const h = announceBar ? announceBar.offsetHeight : 0
   nav.style.top = h + 'px'
+  // used by the phone/tablet hero layout
+  document.documentElement.style.setProperty('--nav-offset', (h + nav.offsetHeight) + 'px')
 }
 updateNavTop()
 window.addEventListener('resize', updateNavTop)

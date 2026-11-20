@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FunVille — The Ultimate Indoor Playground</title>
-  <meta name="description" content="FunVille is the ultimate indoor playground for curious, energetic kids. Book a visit or plan a birthday party today!" />
+  <title>FunVille — detský zábavný svet pod strechou</title>
+  <meta name="description" content="FunVille je detský zábavný svet pod strechou pre zvedavé a energické deti. Rezervujte si návštevu alebo naplánujte narodeninovú oslavu ešte dnes!" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -53,8 +53,8 @@
      ANNOUNCE BAR
 ═════════════════════════════════════════════════════ -->
 <div class="fixed top-0 left-0 right-0 bg-fv-navy text-white text-center py-2.5 px-4 font-nunito text-xs font-semibold tracking-wide z-[70]">
-  Summer Holiday Special — Kids go free with a full-price adult! &nbsp;|&nbsp;
-  <a href="#pricing" class="underline text-fv-lime hover:text-white transition-colors">See Pricing →</a>
+  Letná prázdninová akcia — deti zdarma s dospelým za plné vstupné! &nbsp;|&nbsp;
+  <a href="#pricing" class="underline text-fv-lime hover:text-white transition-colors">Pozrieť cenník →</a>
 </div>
 
 <!-- ════════════════════════════════════════════════════
@@ -63,28 +63,28 @@
 <nav
   class="fixed top-8 left-0 right-0 z-50 bg-white nav-shadow"
   role="navigation"
-  aria-label="Main navigation"
+  aria-label="Hlavná navigácia"
 >
   <div class="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between">
 
     <!-- Logo -->
-    <a href="#" class="flex items-center" aria-label="FunVille home">
+    <a href="#" class="flex items-center" aria-label="FunVille – domov">
       <img src="img/funville_logo_R_dominik.png" alt="FunVille" class="h-20 w-auto" />
     </a>
 
     <!-- Desktop links -->
     <ul class="hidden lg:flex items-center gap-1" role="list">
-      <li><a href="#zones"    class="font-nunito font-semibold text-fv-navy/75 hover:text-fv-navy px-4 py-2 rounded-full hover:bg-fv-sky-light transition-all text-sm">Play Zones</a></li>
-      <li><a href="#birthday" class="font-nunito font-semibold text-fv-navy/75 hover:text-fv-navy px-4 py-2 rounded-full hover:bg-fv-sky-light transition-all text-sm">Parties</a></li>
-      <li><a href="#pricing"  class="font-nunito font-semibold text-fv-navy/75 hover:text-fv-navy px-4 py-2 rounded-full hover:bg-fv-sky-light transition-all text-sm">Pricing</a></li>
-      <li><a href="#faq"      class="font-nunito font-semibold text-fv-navy/75 hover:text-fv-navy px-4 py-2 rounded-full hover:bg-fv-sky-light transition-all text-sm">FAQ</a></li>
-      <li><a href="#contact"  class="font-nunito font-semibold text-fv-navy/75 hover:text-fv-navy px-4 py-2 rounded-full hover:bg-fv-sky-light transition-all text-sm">Contact</a></li>
+      <li><a href="#zones"    class="font-nunito font-semibold text-fv-navy/75 hover:text-fv-navy px-4 py-2 rounded-full hover:bg-fv-sky-light transition-all text-sm">Herné zóny</a></li>
+      <li><a href="#birthday" class="font-nunito font-semibold text-fv-navy/75 hover:text-fv-navy px-4 py-2 rounded-full hover:bg-fv-sky-light transition-all text-sm">Oslavy</a></li>
+      <li><a href="#pricing"  class="font-nunito font-semibold text-fv-navy/75 hover:text-fv-navy px-4 py-2 rounded-full hover:bg-fv-sky-light transition-all text-sm">Cenník</a></li>
+      <li><a href="#faq"      class="font-nunito font-semibold text-fv-navy/75 hover:text-fv-navy px-4 py-2 rounded-full hover:bg-fv-sky-light transition-all text-sm">Časté otázky</a></li>
+      <li><a href="#contact"  class="font-nunito font-semibold text-fv-navy/75 hover:text-fv-navy px-4 py-2 rounded-full hover:bg-fv-sky-light transition-all text-sm">Kontakt</a></li>
     </ul>
 
     <!-- Book Now CTA -->
     <div class="hidden lg:block">
       <a href="#book" class="font-fredoka font-bold text-fv-navy bg-fv-lime border-3 border-fv-navy px-6 py-2.5 rounded-full shadow-cartoon-sm text-sm inline-block btn-hover btn-lime">
-        Book Now
+        Rezervovať
       </a>
     </div>
 
@@ -92,7 +92,7 @@
     <button
       id="hamburger"
       class="lg:hidden flex flex-col gap-[5px] p-2 cursor-pointer border-none bg-transparent"
-      aria-label="Open menu"
+      aria-label="Otvoriť menu"
       aria-expanded="false"
     >
       <span class="ham-bar block w-6 h-[2.5px] bg-fv-navy rounded-full transition-all duration-200 origin-center"></span>
@@ -132,17 +132,17 @@
   class="fixed inset-0 z-40 bg-white flex flex-col items-center justify-center gap-5 pt-20"
   role="dialog"
   aria-modal="true"
-  aria-label="Mobile navigation"
+  aria-label="Mobilná navigácia"
 >
   <div class="absolute top-28 left-8 w-36 h-20 bg-fv-sky-light rounded-full opacity-60 animate-cloud-drift" aria-hidden="true"></div>
   <div class="absolute top-40 right-6 w-28 h-16 bg-fv-lime-light rounded-full opacity-60 animate-cloud-drift delay-1000" aria-hidden="true"></div>
-  <a href="#zones"    onclick="closeMobileMenu()" class="font-fredoka text-2xl font-bold text-fv-navy hover:text-fv-pink transition-colors">Play Zones</a>
-  <a href="#birthday" onclick="closeMobileMenu()" class="font-fredoka text-2xl font-bold text-fv-navy hover:text-fv-pink transition-colors">Parties</a>
-  <a href="#pricing"  onclick="closeMobileMenu()" class="font-fredoka text-2xl font-bold text-fv-navy hover:text-fv-pink transition-colors">Pricing</a>
-  <a href="#faq"      onclick="closeMobileMenu()" class="font-fredoka text-2xl font-bold text-fv-navy hover:text-fv-pink transition-colors">FAQ</a>
-  <a href="#contact"  onclick="closeMobileMenu()" class="font-fredoka text-2xl font-bold text-fv-navy hover:text-fv-pink transition-colors">Visit Us</a>
+  <a href="#zones"    onclick="closeMobileMenu()" class="font-fredoka text-2xl font-bold text-fv-navy hover:text-fv-pink transition-colors">Herné zóny</a>
+  <a href="#birthday" onclick="closeMobileMenu()" class="font-fredoka text-2xl font-bold text-fv-navy hover:text-fv-pink transition-colors">Oslavy</a>
+  <a href="#pricing"  onclick="closeMobileMenu()" class="font-fredoka text-2xl font-bold text-fv-navy hover:text-fv-pink transition-colors">Cenník</a>
+  <a href="#faq"      onclick="closeMobileMenu()" class="font-fredoka text-2xl font-bold text-fv-navy hover:text-fv-pink transition-colors">Časté otázky</a>
+  <a href="#contact"  onclick="closeMobileMenu()" class="font-fredoka text-2xl font-bold text-fv-navy hover:text-fv-pink transition-colors">Kontakt</a>
   <a href="#book"     onclick="closeMobileMenu()" class="mt-4 font-fredoka font-bold text-fv-navy bg-fv-lime border-4 border-fv-navy px-10 py-4 rounded-full shadow-cartoon text-xl btn-hover btn-lime">
-    Book a Visit
+    Rezervovať návštevu
   </a>
 </div>
 
@@ -152,7 +152,7 @@
 ═════════════════════════════════════════════════════ -->
 <section
   class="relative min-h-screen flex items-center overflow-hidden bg-fv-sky section-hero"
-  aria-label="Welcome to FunVille"
+  aria-label="Vitajte vo FunVille"
 >
   <!-- Background photo -->
   <div class="absolute inset-0 pointer-events-none hero-bg-img" aria-hidden="true"></div>
@@ -162,24 +162,24 @@
   <!-- Floating shapes -->
 
   <!-- Big pink 5-point star, top-left -->
-  <svg class="absolute pointer-events-none select-none animate-float" style="top:16%;left:2%;width:82px;height:82px;" viewBox="0 0 100 100" aria-hidden="true">
+  <svg class="absolute pointer-events-none select-none animate-float hs-star" style="top:16%;left:2%;width:82px;height:82px;" viewBox="0 0 100 100" aria-hidden="true">
     <path d="M50,5 L60.6,35.4 L92.8,36.1 L67.1,55.6 L76.4,86.4 L50,68 L23.6,86.4 L32.9,55.6 L7.2,36.1 L39.4,35.4 Z"
           fill="#EC508C" stroke="#0A2D61" stroke-width="4.5" stroke-linejoin="round"/>
   </svg>
 
 
   <!-- Sky blue triangle, mid-left -->
-  <svg class="absolute pointer-events-none select-none animate-float-rot delay-800" style="top:54%;left:2%;width:70px;height:70px;" viewBox="0 0 100 100" aria-hidden="true">
+  <svg class="absolute pointer-events-none select-none animate-float-rot delay-800 hs-tri" style="top:54%;left:2%;width:70px;height:70px;" viewBox="0 0 100 100" aria-hidden="true">
     <polygon points="50,8 94,88 6,88" fill="#63CCF5" stroke="#0A2D61" stroke-width="5" stroke-linejoin="round"/>
   </svg>
 
   <!-- Lime rotated diamond square, left -->
-  <svg class="absolute pointer-events-none select-none animate-float delay-1200" style="top:28%;left:11%;width:46px;height:46px;" viewBox="0 0 100 100" aria-hidden="true">
+  <svg class="absolute pointer-events-none select-none animate-float delay-1200 hs-diamond" style="top:28%;left:11%;width:46px;height:46px;" viewBox="0 0 100 100" aria-hidden="true">
     <rect x="18" y="18" width="64" height="64" rx="8" fill="#D6DF2D" stroke="#0A2D61" stroke-width="6" transform="rotate(45 50 50)"/>
   </svg>
 
   <!-- Filled pink circle, left -->
-  <svg class="absolute pointer-events-none select-none animate-float delay-1500" style="top:74%;left:18%;width:44px;height:44px;" viewBox="0 0 100 100" aria-hidden="true">
+  <svg class="absolute pointer-events-none select-none animate-float delay-1500 hs-circle" style="top:74%;left:18%;width:44px;height:44px;" viewBox="0 0 100 100" aria-hidden="true">
     <circle cx="50" cy="50" r="40" fill="#EC508C" stroke="#0A2D61" stroke-width="6"/>
   </svg>
 
@@ -188,14 +188,14 @@
     <div class="ml-auto w-full max-w-lg xl:max-w-xl hero-entrance">
 
       <!-- Open badge -->
-      <div class="inline-flex items-center gap-2 bg-white border-3 border-fv-navy shadow-cartoon-sm px-5 py-2 rounded-full mb-7 font-nunito text-sm font-bold text-fv-navy">
+      <div class="inline-flex items-center gap-2 bg-white border-3 border-fv-navy shadow-cartoon-sm px-5 py-2 rounded-full mb-7 font-nunito text-sm font-bold text-fv-navy hero-badge">
         <span class="w-2.5 h-2.5 rounded-full bg-fv-lime border-2 border-fv-navy inline-block animate-pulse-sm" aria-hidden="true"></span>
-        Open 7 Days · Ages 0–12 · Always Indoors
+        Otvorené denne · 0–15 rokov · Pod strechou
       </div>
 
       <!-- Welcome to -->
       <p class="font-fredoka font-bold text-white mb-1 hero-welcome">
-        Welcome to
+        Vitajte vo
       </p>
 
       <!-- FunVille! bouncing -->
@@ -209,39 +209,39 @@
       </h1>
 
       <!-- CTAs -->
-      <div class="flex flex-wrap gap-4 mb-12">
+      <div class="flex flex-wrap gap-4 mb-12 hero-ctas">
         <a
           href="#book"
           class="font-fredoka font-bold text-white bg-fv-pink border-4 border-fv-navy shadow-cartoon text-xl px-8 py-4 rounded-full inline-flex items-center gap-2 btn-hover btn-pink"
         >
-          Book a Visit
+          Rezervovať návštevu
         </a>
         <a
           href="#birthday"
           class="font-fredoka font-bold text-fv-navy bg-white border-4 border-fv-navy shadow-cartoon-lime text-xl px-8 py-4 rounded-full inline-flex items-center gap-2 btn-hover btn-white"
         >
-          Plan a Birthday
+          Naplánovať oslavu
         </a>
       </div>
     </div>
   </div>
 
   <!-- Marquee badges — full width at bottom -->
-  <div class="absolute left-0 right-0 marquee-wrap" aria-label="FunVille highlights">
+  <div class="absolute left-0 right-0 marquee-wrap" aria-label="Prečo FunVille">
     <div id="marquee-track" class="flex whitespace-nowrap gap-3 marquee-track">
-      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Always Indoors</span>
-      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Safety First</span>
-      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Sparkling Clean</span>
-      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">4.9 Star Rated</span>
-      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Open 7 Days</span>
-      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Ages 0–12</span>
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Vždy pod strechou</span>
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Bezpečnosť na prvom mieste</span>
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Vždy čisto</span>
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Hodnotenie 4,9 ★</span>
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Otvorené 7 dní v týždni</span>
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">0–15 rokov</span>
       <!-- duplicate -->
-      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Always Indoors</span>
-      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Safety First</span>
-      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Sparkling Clean</span>
-      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">4.9 Star Rated</span>
-      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Open 7 Days</span>
-      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Ages 0–12</span>
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Vždy pod strechou</span>
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Bezpečnosť na prvom mieste</span>
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Vždy čisto</span>
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Hodnotenie 4,9 ★</span>
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Otvorené 7 dní v týždni</span>
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">0–15 rokov</span>
     </div>
   </div>
 
@@ -252,11 +252,11 @@
       <path d="M0,100 L0,70 C120,48 240,86 360,70 C480,54 600,82 720,68 C840,54 960,84 1080,70 C1200,56 1320,80 1440,70 L1440,100 Z" fill="rgba(255,255,255,.18)"/>
     </svg>
     <!-- Bouncing balls -->
-    <div class="absolute animate-float"        style="bottom:1rem;left:8%;"><div class="w-20 h-20 rounded-full bg-fv-pink border-4 border-fv-navy shadow-cartoon"></div></div>
-    <div class="absolute animate-float delay-400" style="bottom:2rem;left:28%;"><div class="w-24 h-24 rounded-full bg-fv-sky border-4 border-fv-navy shadow-cartoon"></div></div>
-    <div class="absolute animate-float delay-200" style="bottom:.75rem;left:50%;transform:translateX(-50%);"><div class="w-28 h-28 rounded-full bg-fv-lime border-4 border-fv-navy shadow-cartoon"></div></div>
-    <div class="absolute animate-float delay-600" style="bottom:2rem;right:28%;"><div class="w-24 h-24 rounded-full bg-white border-4 border-fv-navy shadow-cartoon"></div></div>
-    <div class="absolute animate-float delay-1000" style="bottom:1rem;right:8%;"><div class="w-20 h-20 rounded-full bg-fv-pink border-4 border-fv-navy shadow-cartoon"></div></div>
+    <div class="absolute animate-float hero-ball hb-1"><div class="w-20 h-20 rounded-full bg-fv-pink border-4 border-fv-navy shadow-cartoon"></div></div>
+    <div class="absolute animate-float delay-400 hero-ball hb-2"><div class="w-24 h-24 rounded-full bg-fv-sky border-4 border-fv-navy shadow-cartoon"></div></div>
+    <div class="absolute animate-float delay-200 hero-ball hb-3"><div class="w-28 h-28 rounded-full bg-fv-lime border-4 border-fv-navy shadow-cartoon"></div></div>
+    <div class="absolute animate-float delay-600 hero-ball hb-4"><div class="w-24 h-24 rounded-full bg-white border-4 border-fv-navy shadow-cartoon"></div></div>
+    <div class="absolute animate-float delay-1000 hero-ball hb-5"><div class="w-20 h-20 rounded-full bg-fv-pink border-4 border-fv-navy shadow-cartoon"></div></div>
   </div>
 </section>
 
@@ -264,24 +264,24 @@
 <!-- ════════════════════════════════════════════════════
      STATS BAR
 ═════════════════════════════════════════════════════ -->
-<section class="relative bg-fv-lime section-stats" aria-label="FunVille stats">
+<section class="relative bg-fv-lime section-stats" aria-label="FunVille v číslach">
   <div class="max-w-5xl mx-auto px-6">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
       <div class="reveal" data-delay="0">
         <div class="font-fredoka font-bold text-fv-navy heading-stats" data-counter="2500" data-suffix="+">0</div>
-        <div class="font-nunito font-semibold text-fv-navy/70 text-sm mt-1">Happy Families</div>
+        <div class="font-nunito font-semibold text-fv-navy/70 text-sm mt-1">Spokojných rodín</div>
       </div>
       <div class="reveal" data-delay="80">
-        <div class="font-fredoka font-bold text-fv-navy heading-stats" data-counter="6" data-suffix="">0</div>
-        <div class="font-nunito font-semibold text-fv-navy/70 text-sm mt-1">Play Zones</div>
+        <div class="font-fredoka font-bold text-fv-navy heading-stats" data-counter="2" data-suffix="">0</div>
+        <div class="font-nunito font-semibold text-fv-navy/70 text-sm mt-1">Herné zóny</div>
       </div>
       <div class="reveal" data-delay="160">
-        <div class="font-fredoka font-bold text-fv-navy heading-stats" data-counter="4" data-suffix=".9★">0</div>
-        <div class="font-nunito font-semibold text-fv-navy/70 text-sm mt-1">Average Rating</div>
+        <div class="font-fredoka font-bold text-fv-navy heading-stats" data-counter="4" data-suffix=",9★">0</div>
+        <div class="font-nunito font-semibold text-fv-navy/70 text-sm mt-1">Priemerné hodnotenie</div>
       </div>
       <div class="reveal" data-delay="240">
-        <div class="font-fredoka font-bold text-fv-navy heading-stats" data-counter="7" data-suffix=" days">0</div>
-        <div class="font-nunito font-semibold text-fv-navy/70 text-sm mt-1">Open Every Week</div>
+        <div class="font-fredoka font-bold text-fv-navy heading-stats" data-counter="7" data-suffix=" dní">0</div>
+        <div class="font-nunito font-semibold text-fv-navy/70 text-sm mt-1">Otvorené v týždni</div>
       </div>
     </div>
   </div>
@@ -298,7 +298,7 @@
 <!-- ════════════════════════════════════════════════════
      WHY FUNVILLE
 ═════════════════════════════════════════════════════ -->
-<section class="relative bg-white overflow-hidden section-std" aria-label="Why FunVille">
+<section class="relative bg-white overflow-hidden section-std" aria-label="Prečo FunVille">
 
   <!-- Decorative blobs -->
   <div class="absolute top-20 right-[-80px] w-72 h-72 rounded-full bg-fv-sky-light border-4 border-fv-sky opacity-60 pointer-events-none" aria-hidden="true"></div>
@@ -307,51 +307,51 @@
   <div class="relative z-10 max-w-7xl mx-auto px-6">
     <div class="flex flex-col lg:flex-row items-center gap-10 mb-16">
       <div class="text-center lg:text-left reveal lg:w-1/2">
-        <span class="inline-block bg-fv-lime border-3 border-fv-navy shadow-cartoon-sm px-5 py-2 rounded-full font-fredoka font-bold text-fv-navy text-sm mb-4">Why Families Choose Us</span>
+        <span class="inline-block bg-fv-lime border-3 border-fv-navy shadow-cartoon-sm px-5 py-2 rounded-full font-fredoka font-bold text-fv-navy text-sm mb-4">Prečo si nás rodiny vyberajú</span>
         <h2 class="font-fredoka font-bold text-fv-navy leading-tight heading-section">
-          Six Reasons to <span class="text-fv-pink">Fall in Love</span>
+          Šesť dôvodov, prečo si nás <span class="text-fv-pink">zamilujete</span>
         </h2>
       </div>
       <div class="reveal reveal-right lg:w-1/2 flex justify-center">
         <img
           src="img/funville_deti.png"
-          alt="Happy child playing at FunVille"
+          alt="Šťastné dieťa sa hrá vo FunVille"
           class="w-72 h-auto animate-float"
           loading="lazy"
         />
       </div>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 swipe-row">
 
       <div class="reveal card-lift bg-fv-sky border-4 border-fv-navy shadow-cartoon rounded-3xl p-8 flex flex-col gap-4 tilt-neg-2" data-delay="0">
-        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">Safety First</h3>
-        <p class="font-nunito text-fv-navy/75 text-sm leading-relaxed">Fully padded surfaces, trained staff on every level, and constant zone supervision so you can actually relax.</p>
+        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">Bezpečnosť na prvom mieste</h3>
+        <p class="font-nunito text-fv-navy/75 text-sm leading-relaxed">Mäkko čalúnené povrchy, vyškolený personál na každom poschodí a neustály dozor v zónach, aby ste si mohli naozaj oddýchnuť.</p>
       </div>
 
       <div class="reveal card-lift bg-fv-lime border-4 border-fv-navy shadow-cartoon rounded-3xl p-8 flex flex-col gap-4 tilt-pos-15" data-delay="80">
-        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">Sparkling Clean</h3>
-        <p class="font-nunito text-fv-navy/75 text-sm leading-relaxed">Deep-cleaned daily, sanitised throughout the day. We take hygiene as seriously as the fun.</p>
+        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">Vždy čisto</h3>
+        <p class="font-nunito text-fv-navy/75 text-sm leading-relaxed">Každý deň dôkladne upratané a počas dňa dezinfikované. Hygienu berieme rovnako vážne ako zábavu.</p>
       </div>
 
       <div class="reveal card-lift bg-fv-pink border-4 border-fv-navy shadow-cartoon rounded-3xl p-8 flex flex-col gap-4 tilt-neg-1" data-delay="160">
-        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">Rain or Shine</h3>
-        <p class="font-nunito text-fv-navy/75 text-sm leading-relaxed">Fully indoors — zero weather cancellations. The perfect rainy-day plan that always delivers.</p>
+        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">Za dažďa aj za slnka</h3>
+        <p class="font-nunito text-fv-navy/75 text-sm leading-relaxed">Všetko pod strechou – počasie vám plány nepokazí. Ideálny program na daždivý deň, ktorý nikdy nesklame.</p>
       </div>
 
       <div class="reveal card-lift bg-white border-4 border-fv-navy shadow-cartoon rounded-3xl p-8 flex flex-col gap-4 tilt-pos-2" data-delay="0">
-        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">Parents Love It Too</h3>
-        <p class="font-nunito text-fv-navy/75 text-sm leading-relaxed">Comfy seating, great café, free Wi-Fi, and full sightlines to every zone. Your comfort matters.</p>
+        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">Rodičia sú tiež nadšení</h3>
+        <p class="font-nunito text-fv-navy/75 text-sm leading-relaxed">Pohodlné sedenie, výborná kaviareň, Wi-Fi zdarma a výhľad na každú zónu. Na vašom pohodlí nám záleží.</p>
       </div>
 
       <div class="reveal card-lift bg-fv-sky border-4 border-fv-navy shadow-cartoon rounded-3xl p-8 flex flex-col gap-4 tilt-neg-15" data-delay="80">
-        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">Birthday Magic</h3>
-        <p class="font-nunito text-fv-navy/75 text-sm leading-relaxed">Dedicated party rooms, custom packages, and a team that makes every celebration unforgettable.</p>
+        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">Narodeninové kúzlo</h3>
+        <p class="font-nunito text-fv-navy/75 text-sm leading-relaxed">Samostatné miestnosti na oslavy, balíčky na mieru a tím, vďaka ktorému bude každá oslava nezabudnuteľná.</p>
       </div>
 
       <div class="reveal card-lift bg-fv-lime border-4 border-fv-navy shadow-cartoon rounded-3xl p-8 flex flex-col gap-4 tilt-pos-1" data-delay="160">
-        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">4.9 Star Rated</h3>
-        <p class="font-nunito text-fv-navy/75 text-sm leading-relaxed">Hundreds of happy families can't be wrong. We're the #1 rated indoor play venue in the city.</p>
+        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">Hodnotenie 4,9 ★</h3>
+        <p class="font-nunito text-fv-navy/75 text-sm leading-relaxed">Stovky spokojných rodín sa nemôžu mýliť. Sme najlepšie hodnotená detská herňa v meste.</p>
       </div>
 
     </div>
@@ -369,74 +369,38 @@
 <!-- ════════════════════════════════════════════════════
      ZONES
 ═════════════════════════════════════════════════════ -->
-<section id="zones" class="relative overflow-hidden bg-fv-pink section-tall" aria-label="Play zones">
+<section id="zones" class="relative overflow-hidden bg-fv-pink section-tall" aria-label="Herné zóny">
 
   <div class="absolute top-[20px] right-[-120px] w-96 h-96 rounded-full pointer-events-none blob-white" aria-hidden="true"></div>
   <div class="absolute bottom-32 left-[-80px] w-72 h-72 rounded-full pointer-events-none blob-navy" aria-hidden="true"></div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-6">
     <div class="text-center mb-16 reveal">
-      <span class="inline-block bg-fv-navy border-3 border-white shadow-cartoon-white px-5 py-2 rounded-full font-fredoka font-bold text-white text-sm mb-4">Explore The Playground</span>
+      <span class="inline-block bg-fv-navy border-3 border-white shadow-cartoon-white px-5 py-2 rounded-full font-fredoka font-bold text-white text-sm mb-4">Objavte ihrisko</span>
       <h2 class="font-fredoka font-bold text-white leading-tight heading-section">
-        Six Amazing <span class="text-fv-lime">Play Zones</span>
+        Dve úžasné <span class="text-fv-lime">herné zóny</span>
       </h2>
-      <p class="font-nunito text-white/80 mt-3 mx-auto max-w-lg">Every corner of FunVille is designed to spark imagination and get those little bodies moving.</p>
+      <p class="font-nunito text-white/80 mt-3 mx-auto max-w-lg">Každý kútik FunVille je navrhnutý tak, aby podnecoval fantáziu a rozhýbal malé telíčka.</p>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
 
       <div class="reveal-scale card-lift bg-fv-sky border-4 border-fv-navy shadow-cartoon rounded-3xl p-7 flex flex-col gap-3 tilt-neg-1" data-delay="0">
         <div class="flex items-start justify-between gap-3">
-          <span class="bg-fv-lime border-2 border-fv-navy px-3 py-1 rounded-full font-nunito text-xs font-bold text-fv-navy flex-shrink-0">Ages 4–12</span>
+          <span class="bg-fv-lime border-2 border-fv-navy px-3 py-1 rounded-full font-nunito text-xs font-bold text-fv-navy flex-shrink-0">4–15 rokov</span>
         </div>
-        <h3 class="font-fredoka font-bold text-fv-navy text-xl">Climbing Kingdom</h3>
-        <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed">Towering climbing walls, rope bridges, and a mega slide. The ultimate test of courage!</p>
-        <span class="mt-auto font-fredoka font-bold text-fv-navy text-sm">Explore →</span>
+        <h3 class="font-fredoka font-bold text-fv-navy text-xl">Lezecké kráľovstvo</h3>
+        <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed">Vysoké lezecké steny, lanové mosty a obrovská šmykľavka. Skutočná skúška odvahy!</p>
+        <span class="mt-auto font-fredoka font-bold text-fv-navy text-sm">Preskúmať →</span>
       </div>
 
       <div class="reveal-scale card-lift bg-fv-lime border-4 border-fv-navy shadow-cartoon rounded-3xl p-7 flex flex-col gap-3 tilt-pos-15" data-delay="70">
         <div class="flex items-start justify-between gap-3">
-          <span class="bg-fv-pink border-2 border-fv-navy px-3 py-1 rounded-full font-nunito text-xs font-bold text-fv-navy flex-shrink-0">Ages 0–4</span>
+          <span class="bg-fv-pink border-2 border-fv-navy px-3 py-1 rounded-full font-nunito text-xs font-bold text-fv-navy flex-shrink-0">0–4 roky</span>
         </div>
-        <h3 class="font-fredoka font-bold text-fv-navy text-xl">Toddler Town</h3>
-        <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed">Soft foam pits, gentle slides, and squishy shapes — perfectly sized for little explorers.</p>
-        <span class="mt-auto font-fredoka font-bold text-fv-navy text-sm">Explore →</span>
-      </div>
-
-      <div class="reveal-scale card-lift bg-fv-pink border-4 border-fv-navy shadow-cartoon rounded-3xl p-7 flex flex-col gap-3 tilt-neg-2" data-delay="140">
-        <div class="flex items-start justify-between gap-3">
-          <span class="bg-fv-sky border-2 border-fv-navy px-3 py-1 rounded-full font-nunito text-xs font-bold text-fv-navy flex-shrink-0">All Ages</span>
-        </div>
-        <h3 class="font-fredoka font-bold text-fv-navy text-xl">Art Studio</h3>
-        <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed">Get messy! Painting, crafts, and creative workshops run throughout the day.</p>
-        <span class="mt-auto font-fredoka font-bold text-fv-navy text-sm">Explore →</span>
-      </div>
-
-      <div class="reveal-scale card-lift bg-white border-4 border-fv-navy shadow-cartoon rounded-3xl p-7 flex flex-col gap-3 tilt-pos-1" data-delay="0">
-        <div class="flex items-start justify-between gap-3">
-          <span class="bg-fv-lime border-2 border-fv-navy px-3 py-1 rounded-full font-nunito text-xs font-bold text-fv-navy flex-shrink-0">Ages 6–12</span>
-        </div>
-        <h3 class="font-fredoka font-bold text-fv-navy text-xl">Ninja Run</h3>
-        <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed">Obstacle courses, balance beams, and warp walls. Can you conquer the ultimate run?</p>
-        <span class="mt-auto font-fredoka font-bold text-fv-navy text-sm">Explore →</span>
-      </div>
-
-      <div class="reveal-scale card-lift bg-fv-sky border-4 border-fv-navy shadow-cartoon rounded-3xl p-7 flex flex-col gap-3 tilt-neg-15" data-delay="70">
-        <div class="flex items-start justify-between gap-3">
-          <span class="bg-fv-pink border-2 border-fv-navy px-3 py-1 rounded-full font-nunito text-xs font-bold text-fv-navy flex-shrink-0">Ages 3–10</span>
-        </div>
-        <h3 class="font-fredoka font-bold text-fv-navy text-xl">Drama Den</h3>
-        <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed">A mini theatre, costumes, and a stage. Every child deserves their moment in the spotlight.</p>
-        <span class="mt-auto font-fredoka font-bold text-fv-navy text-sm">Explore →</span>
-      </div>
-
-      <div class="reveal-scale card-lift bg-fv-lime border-4 border-fv-navy shadow-cartoon rounded-3xl p-7 flex flex-col gap-3 tilt-pos-05" data-delay="140">
-        <div class="flex items-start justify-between gap-3">
-          <span class="bg-fv-sky border-2 border-fv-navy px-3 py-1 rounded-full font-nunito text-xs font-bold text-fv-navy flex-shrink-0">Adults</span>
-        </div>
-        <h3 class="font-fredoka font-bold text-fv-navy text-xl">Parent Lounge</h3>
-        <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed">Real coffee, comfy seating with full sightlines, and free Wi-Fi. You're very welcome here.</p>
-        <span class="mt-auto font-fredoka font-bold text-fv-navy text-sm">Explore →</span>
+        <h3 class="font-fredoka font-bold text-fv-navy text-xl">Mestečko pre najmenších</h3>
+        <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed">Mäkké bazény s penovými kockami, nízke šmykľavky a mäkučké tvary – všetko na mieru malým objaviteľom.</p>
+        <span class="mt-auto font-fredoka font-bold text-fv-navy text-sm">Preskúmať →</span>
       </div>
 
     </div>
@@ -447,9 +411,9 @@
     <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" class="w-full bridge-svg" preserveAspectRatio="none">
       <path d="M0,100 L0,40 C180,80 360,20 540,55 C720,90 900,25 1080,58 C1260,91 1380,42 1440,50 L1440,100 Z" fill="#0A2D61"/>
     </svg>
-    <div class="absolute animate-float"         style="bottom:1rem;left:20%;"><div class="w-16 h-16 rounded-full bg-fv-pink border-4 border-fv-navy shadow-cartoon"></div></div>
-    <div class="absolute animate-float delay-300" style="bottom:2rem;left:50%;transform:translateX(-50%);"><div class="w-20 h-20 rounded-full bg-fv-sky border-4 border-fv-navy shadow-cartoon"></div></div>
-    <div class="absolute animate-float delay-700" style="bottom:1rem;right:20%;"><div class="w-16 h-16 rounded-full bg-white border-4 border-fv-navy shadow-cartoon"></div></div>
+    <div class="absolute animate-float zone-ball zb-1"><div class="w-16 h-16 rounded-full bg-fv-pink border-4 border-fv-navy shadow-cartoon"></div></div>
+    <div class="absolute animate-float delay-300 zone-ball zb-2"><div class="w-20 h-20 rounded-full bg-fv-sky border-4 border-fv-navy shadow-cartoon"></div></div>
+    <div class="absolute animate-float delay-700 zone-ball zb-3"><div class="w-16 h-16 rounded-full bg-white border-4 border-fv-navy shadow-cartoon"></div></div>
   </div>
 </section>
 
@@ -457,7 +421,7 @@
 <!-- ════════════════════════════════════════════════════
      BIRTHDAY
 ═════════════════════════════════════════════════════ -->
-<section id="birthday" class="relative overflow-hidden bg-birthday section-tall" aria-label="Birthday parties">
+<section id="birthday" class="relative overflow-hidden bg-birthday section-tall" aria-label="Narodeninové oslavy">
 
   <!-- Confetti bits -->
   <div class="absolute w-4 h-4 bg-fv-lime rounded-sm pointer-events-none animate-float confetti-1"></div>
@@ -471,61 +435,61 @@
 
   <div class="relative z-10 max-w-7xl mx-auto px-6 mb-8">
     <div class="text-center mb-16 reveal">
-      <span class="inline-block bg-fv-pink border-3 border-white shadow-cartoon-white px-5 py-2 rounded-full font-fredoka font-bold text-white text-sm mb-4">Birthday Parties</span>
+      <span class="inline-block bg-fv-pink border-3 border-white shadow-cartoon-white px-5 py-2 rounded-full font-fredoka font-bold text-white text-sm mb-4">Narodeninové oslavy</span>
       <h2 class="font-fredoka font-bold text-white leading-tight heading-section">
-        Make Their Day <span class="text-fv-lime">Unforgettable</span>
+        Urobte ich deň <span class="text-fv-lime">nezabudnuteľným</span>
       </h2>
-      <p class="font-nunito text-white/75 mt-3 mx-auto max-w-lg">From intimate family gatherings to epic celebrations — we have a package for every dream birthday.</p>
+      <p class="font-nunito text-white/75 mt-3 mx-auto max-w-lg">Od komorných rodinných stretnutí až po veľkolepé oslavy – máme balíček pre každé vysnívané narodeniny.</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start swipe-row" data-dots="light">
 
       <!-- Starter -->
       <div class="reveal card-lift bg-fv-sky border-4 border-fv-navy shadow-cartoon-lg rounded-3xl p-8 flex flex-col gap-4" data-delay="0">
-        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">Party Starter</h3>
-        <div class="font-fredoka font-bold text-fv-navy price-party">£249<span class="text-base font-nunito font-normal text-fv-navy/60 ml-1">/ party</span></div>
+        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">Párty štart</h3>
+        <div class="font-fredoka font-bold text-fv-navy price-party">249 €<span class="text-base font-nunito font-normal text-fv-navy/60 ml-1">/ oslava</span></div>
         <ul class="flex flex-col gap-2 mt-1">
-          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> 2 hours exclusive play</li>
-          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> 1 party room (up to 15 kids)</li>
-          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Basic decorations</li>
-          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Invites &amp; goodie bags</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> 2 hodiny exkluzívnej hry</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> 1 miestnosť na oslavu (do 15 detí)</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Základná výzdoba</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Pozvánky a darčekové balíčky</li>
           <br>
           <br>
         </ul>
-        <a href="#book" class="mt-auto bg-fv-navy border-3 border-fv-navy shadow-cartoon-sm text-white font-fredoka font-bold px-6 py-3 rounded-full text-center btn-hover btn-lime block">Reserve</a>
+        <a href="#book" class="mt-auto bg-fv-navy border-3 border-fv-navy shadow-cartoon-sm text-white font-fredoka font-bold px-6 py-3 rounded-full text-center btn-hover btn-lime block">Rezervovať</a>
       </div>
 
       <!-- Blowout (popular) -->
       <div class="reveal card-lift bg-fv-lime border-4 border-fv-navy shadow-cartoon-lg rounded-3xl p-8 flex flex-col gap-4 relative md:-mt-4" data-delay="100">
         <div class="absolute -top-5 left-1/2 -translate-x-1/2">
-          <span class="bg-fv-pink border-3 border-fv-navy shadow-cartoon-sm px-4 py-1.5 rounded-full font-fredoka font-bold text-white text-sm whitespace-nowrap animate-wiggle block">⭐ Most Popular</span>
+          <span class="bg-fv-pink border-3 border-fv-navy shadow-cartoon-sm px-4 py-1.5 rounded-full font-fredoka font-bold text-white text-sm whitespace-nowrap animate-wiggle block">⭐ Najobľúbenejší</span>
         </div>
-        <h3 class="font-fredoka font-bold text-fv-navy text-2xl mt-4">Birthday Blowout</h3>
-        <div class="font-fredoka font-bold text-fv-navy price-party">£449<span class="text-base font-nunito font-normal text-fv-navy/60 ml-1">/ party</span></div>
+        <h3 class="font-fredoka font-bold text-fv-navy text-2xl mt-4">Narodeninová bomba</h3>
+        <div class="font-fredoka font-bold text-fv-navy price-party">449 €<span class="text-base font-nunito font-normal text-fv-navy/60 ml-1">/ oslava</span></div>
         <ul class="flex flex-col gap-2 mt-1">
-          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> 3 hours exclusive play</li>
-          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Large party room (up to 30 kids)</li>
-          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Full decorations &amp; balloons</li>
-          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Birthday cake included</li>
-          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Dedicated party host</li>
-          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Premium goodie bags</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> 3 hodiny exkluzívnej hry</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Veľká miestnosť na oslavu (do 30 detí)</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Kompletná výzdoba a balóny</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Narodeninová torta v cene</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Vlastný animátor oslavy</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Prémiové darčekové balíčky</li>
         </ul>
-        <a href="#book" class="mt-auto bg-fv-navy border-3 border-fv-navy shadow-cartoon-sm text-white font-fredoka font-bold px-6 py-3 rounded-full text-center btn-hover btn-lime block">Reserve</a>
+        <a href="#book" class="mt-auto bg-fv-navy border-3 border-fv-navy shadow-cartoon-sm text-white font-fredoka font-bold px-6 py-3 rounded-full text-center btn-hover btn-lime block">Rezervovať</a>
       </div>
 
       <!-- VIP -->
       <div class="reveal card-lift bg-fv-pink border-4 border-fv-navy shadow-cartoon-lg rounded-3xl p-8 flex flex-col gap-4" data-delay="200">
-        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">VIP Superstar</h3>
-        <div class="font-fredoka font-bold text-fv-navy price-party">£699<span class="text-base font-nunito font-normal text-fv-navy/60 ml-1">/ party</span></div>
+        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">VIP superhviezda</h3>
+        <div class="font-fredoka font-bold text-fv-navy price-party">699 €<span class="text-base font-nunito font-normal text-fv-navy/60 ml-1">/ oslava</span></div>
         <ul class="flex flex-col gap-2 mt-1">
-          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> 4 hours exclusive play</li>
-          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> VIP party suite</li>
-          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Premium décor + photo wall</li>
-          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Custom cake + catering</li>
-          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Dedicated party team</li>
-          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Live entertainment &amp; photos</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> 4 hodiny exkluzívnej hry</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> VIP párty salónik</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Prémiová výzdoba + fotostena</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Torta na želanie + občerstvenie</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Vlastný tím pre oslavu</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Živý program a fotografie</li>
         </ul>
-        <a href="#book" class="mt-auto bg-fv-navy border-3 border-fv-navy shadow-cartoon-sm text-white font-fredoka font-bold px-6 py-3 rounded-full text-center btn-hover btn-lime block">Reserve</a>
+        <a href="#book" class="mt-auto bg-fv-navy border-3 border-fv-navy shadow-cartoon-sm text-white font-fredoka font-bold px-6 py-3 rounded-full text-center btn-hover btn-lime block">Rezervovať</a>
       </div>
 
     </div>
@@ -543,34 +507,34 @@
 <!-- ════════════════════════════════════════════════════
      PRICING
 ═════════════════════════════════════════════════════ -->
-<section id="pricing" class="relative overflow-hidden bg-fv-sky section-std bg-pricing-img" aria-label="Pricing">
+<section id="pricing" class="relative overflow-hidden bg-fv-sky section-std bg-pricing-img" aria-label="Cenník">
 
   <div class="relative z-10 max-w-6xl mx-auto px-6">
 
     <!-- Big playful heading -->
     <div class="mb-16 reveal">
       <h2 class="font-fredoka font-bold text-white heading-pricing">
-        Pricing
+        Cenník
       </h2>
     </div>
 
     <!-- Three cards — avatar overflows top of each card -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start pricing-grid">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start pricing-grid swipe-row">
 
       <!-- Card 1 — 1-Hour Child -->
       <div class="reveal-scale pricing-card pricing-card-shadow relative bg-white rounded-[2rem] text-center flex flex-col pt-16 pb-8 px-8 gap-4" data-delay="0">
         <div class="pricing-avatar" style="background-image:url('img/funville_boy-1.png');">
         </div>
-        <div class="font-fredoka font-bold text-fv-navy tracking-widest text-xs uppercase">1-Hour Entry</div>
+        <div class="font-fredoka font-bold text-fv-navy tracking-widest text-xs uppercase">Vstup na 1 hodinu</div>
         <div class="font-fredoka font-bold text-fv-navy leading-none price-ticket">
-          €4.90<span class="font-nunito font-normal text-fv-navy/40 text-base">/child</span>
+          4,90 €<span class="font-nunito font-normal text-fv-navy/40 text-base">/dieťa</span>
         </div>
         <div class="w-10 h-[3px] mx-auto rounded-full bg-fv-sky"></div>
         <ul class="flex flex-col gap-2 text-left">
-          <li class="font-nunito text-fv-navy/55 text-sm">Each additional hour €4.90</li>
-          <li class="font-nunito text-fv-navy/55 text-sm">One adult entry included</li>
+          <li class="font-nunito text-fv-navy/55 text-sm">Každá ďalšia hodina 4,90 €</li>
+          <li class="font-nunito text-fv-navy/55 text-sm">Vstup pre 1 dospelého v cene</li>
         </ul>
-        <a href="#book" class="mt-2 font-fredoka font-bold text-white bg-fv-sky border-3 border-fv-navy shadow-cartoon-sm px-6 py-3 rounded-full block transition-all">Book Now</a>
+        <a href="#book" class="mt-2 font-fredoka font-bold text-white bg-fv-sky border-3 border-fv-navy shadow-cartoon-sm px-6 py-3 rounded-full block transition-all">Rezervovať</a>
       </div>
 
       <!-- Card 2 — 2-Hour Child (raised, Most Popular) -->
@@ -578,33 +542,33 @@
         <div class="pricing-avatar" style="background-image:url('img/funville_girl-1.png');">
         </div>
         <!-- Most Popular badge — inside card, below avatar space -->
-        <span class="self-center bg-fv-pink border-3 border-fv-navy shadow-cartoon-sm px-4 py-1 rounded-full font-fredoka font-bold text-white text-xs whitespace-nowrap animate-wiggle -mt-2">Most Popular</span>
-        <div class="font-fredoka font-bold text-fv-navy tracking-widest text-xs uppercase">2-Hour Entry</div>
+        <span class="self-center bg-fv-pink border-3 border-fv-navy shadow-cartoon-sm px-4 py-1 rounded-full font-fredoka font-bold text-white text-xs whitespace-nowrap animate-wiggle -mt-2">Najobľúbenejší</span>
+        <div class="font-fredoka font-bold text-fv-navy tracking-widest text-xs uppercase">Vstup na 2 hodiny</div>
         <div class="font-fredoka font-bold text-fv-navy leading-none price-ticket">
-          €6.90<span class="font-nunito font-normal text-fv-navy/40 text-base">/child</span>
+          6,90 €<span class="font-nunito font-normal text-fv-navy/40 text-base">/dieťa</span>
         </div>
         <div class="w-10 h-[3px] mx-auto rounded-full bg-fv-pink"></div>
         <ul class="flex flex-col gap-2 text-left">
-          <li class="font-nunito text-fv-navy/55 text-sm">Each additional hour €1.90</li>
-          <li class="font-nunito text-fv-navy/55 text-sm">One adult entry included</li>
+          <li class="font-nunito text-fv-navy/55 text-sm">Každá ďalšia hodina 1,90 €</li>
+          <li class="font-nunito text-fv-navy/55 text-sm">Vstup pre 1 dospelého v cene</li>
         </ul>
-        <a href="#book" class="mt-2 font-fredoka font-bold text-white bg-fv-pink border-3 border-fv-navy shadow-cartoon-sm px-6 py-3 rounded-full block transition-all">Book Now</a>
+        <a href="#book" class="mt-2 font-fredoka font-bold text-white bg-fv-pink border-3 border-fv-navy shadow-cartoon-sm px-6 py-3 rounded-full block transition-all">Rezervovať</a>
       </div>
 
       <!-- Card 3 — Adult -->
       <div class="reveal-scale pricing-card pricing-card-shadow relative bg-white rounded-[2rem] text-center flex flex-col pt-16 pb-8 px-8 gap-4" data-delay="220">
         <div class="pricing-avatar" style="background-image:url('img/funville_adult-1.png');">
         </div>
-        <div class="font-fredoka font-bold text-fv-navy tracking-widest text-xs uppercase">1-Hour Entry</div>
+        <div class="font-fredoka font-bold text-fv-navy tracking-widest text-xs uppercase">Vstup na 1 hodinu</div>
         <div class="font-fredoka font-bold text-fv-navy leading-none price-ticket">
-          €1.50<span class="font-nunito font-normal text-fv-navy/40 text-base">/adult</span>
+          1,50 €<span class="font-nunito font-normal text-fv-navy/40 text-base">/dospelý</span>
         </div>
         <div class="w-10 h-[3px] mx-auto rounded-full bg-fv-lime"></div>
         <ul class="flex flex-col gap-2 text-left">
-          <li class="font-nunito text-fv-navy/55 text-sm">Each additional hour €1.50</li>
+          <li class="font-nunito text-fv-navy/55 text-sm">Každá ďalšia hodina 1,50 €</li>
           <li class="font-nunito text-fv-navy/55 text-sm">&nbsp;</li>
         </ul>
-        <a href="#book" class="mt-2 font-fredoka font-bold text-fv-navy bg-fv-lime border-3 border-fv-navy shadow-cartoon-sm px-6 py-3 rounded-full block transition-all">Book Now</a>
+        <a href="#book" class="mt-2 font-fredoka font-bold text-fv-navy bg-fv-lime border-3 border-fv-navy shadow-cartoon-sm px-6 py-3 rounded-full block transition-all">Rezervovať</a>
       </div>
 
     </div>
@@ -612,7 +576,7 @@
     <!-- Bottom note -->
     <div class="reveal mt-14 text-center" data-delay="320">
       <p class="font-nunito text-white/70 text-sm">
-        Gift vouchers from €20 &nbsp;·&nbsp; Group discounts for 10+ kids &nbsp;·&nbsp; Under 2s always free
+        Darčekové poukážky od 20 € &nbsp;·&nbsp; Skupinové zľavy pre 10+ detí &nbsp;·&nbsp; Deti do 2 rokov vždy zdarma
       </p>
     </div>
   </div>
@@ -629,73 +593,73 @@
 <!-- ════════════════════════════════════════════════════
      FOR PARENTS
 ═════════════════════════════════════════════════════ -->
-<section class="relative bg-white overflow-hidden section-std" aria-label="For parents">
+<section class="relative bg-white overflow-hidden section-std" aria-label="Pre rodičov">
 
   <div class="relative z-10 max-w-7xl mx-auto px-6">
     <div class="text-center mb-16 reveal">
-      <span class="inline-block bg-fv-sky border-3 border-fv-navy shadow-cartoon-sm px-5 py-2 rounded-full font-fredoka font-bold text-fv-navy text-sm mb-4">For Parents</span>
+      <span class="inline-block bg-fv-sky border-3 border-fv-navy shadow-cartoon-sm px-5 py-2 rounded-full font-fredoka font-bold text-fv-navy text-sm mb-4">Pre rodičov</span>
       <h2 class="font-fredoka font-bold text-fv-navy leading-tight heading-section">
-        You'll Love It <span class="text-fv-sky">Here Too</span>
+        Aj vy sa tu budete <span class="text-fv-sky">cítiť skvele</span>
       </h2>
-      <p class="font-nunito text-fv-navy/65 mt-3 mx-auto max-w-lg">We've designed FunVille so parents feel as welcome as the kids. Because your comfort matters just as much.</p>
+      <p class="font-nunito text-fv-navy/65 mt-3 mx-auto max-w-lg">FunVille sme navrhli tak, aby sa tu rodičia cítili rovnako vítaní ako deti. Na vašom pohodlí nám totiž záleží rovnako.</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
       <div class="flex flex-col gap-5">
         <div class="reveal reveal-left flex items-start gap-4" data-delay="0">
-          <img src="img/espresso_funville.png" alt="Coffee at FunVille café" class="w-16 h-16 object-contain flex-shrink-0 rounded-2xl border-3 border-fv-navy shadow-cartoon-sm bg-fv-lime" loading="lazy" />
+          <img src="img/espresso_funville.png" alt="Káva v kaviarni FunVille" class="w-16 h-16 object-contain flex-shrink-0 rounded-2xl border-3 border-fv-navy shadow-cartoon-sm bg-fv-lime" loading="lazy" />
           <div>
-            <h3 class="font-fredoka font-bold text-fv-navy text-xl mb-1">Real Coffee & Café</h3>
-            <p class="font-nunito text-fv-navy/65 text-sm leading-relaxed">Proper espresso, fresh food, and light snacks. Sit back and watch the action from our comfortable lounge seating.</p>
+            <h3 class="font-fredoka font-bold text-fv-navy text-xl mb-1">Poctivá káva a kaviareň</h3>
+            <p class="font-nunito text-fv-navy/65 text-sm leading-relaxed">Poctivé espresso, čerstvé jedlo a ľahké občerstvenie. Oddýchnite si a sledujte dianie z pohodlného sedenia v našom salóniku.</p>
           </div>
         </div>
         <div class="reveal reveal-left flex items-start gap-4" data-delay="80">
-          <div class="w-14 h-14 rounded-2xl bg-fv-sky border-3 border-fv-navy shadow-cartoon-sm flex items-center justify-center font-fredoka font-bold text-fv-navy text-xl flex-shrink-0">S</div>
+          <div class="w-14 h-14 rounded-2xl bg-fv-sky border-3 border-fv-navy shadow-cartoon-sm flex items-center justify-center font-fredoka font-bold text-fv-navy text-xl flex-shrink-0">V</div>
           <div>
-            <h3 class="font-fredoka font-bold text-fv-navy text-xl mb-1">Full Sightlines</h3>
-            <p class="font-nunito text-fv-navy/65 text-sm leading-relaxed">Every seat in the parent lounge has a clear view of all play zones. You'll never wonder where your child is.</p>
+            <h3 class="font-fredoka font-bold text-fv-navy text-xl mb-1">Dokonalý výhľad</h3>
+            <p class="font-nunito text-fv-navy/65 text-sm leading-relaxed">Z každého miesta v rodičovskom salóniku dobre vidíte na všetky herné zóny. Vždy budete vedieť, kde je vaše dieťa.</p>
           </div>
         </div>
         <div class="reveal reveal-left flex items-start gap-4" data-delay="160">
           <div class="w-14 h-14 rounded-2xl bg-fv-pink border-3 border-fv-navy shadow-cartoon-sm flex items-center justify-center font-fredoka font-bold text-fv-navy text-xl flex-shrink-0">W</div>
           <div>
-            <h3 class="font-fredoka font-bold text-fv-navy text-xl mb-1">Free Wi-Fi</h3>
-            <p class="font-nunito text-fv-navy/65 text-sm leading-relaxed">Fast, reliable connection. Catch up on work, stream something, or just enjoy a quiet moment while the kids play.</p>
+            <h3 class="font-fredoka font-bold text-fv-navy text-xl mb-1">Wi-Fi zdarma</h3>
+            <p class="font-nunito text-fv-navy/65 text-sm leading-relaxed">Rýchle a spoľahlivé pripojenie. Dobehnite prácu, pozrite si niečo alebo si len užite chvíľu pokoja, kým sa deti hrajú.</p>
           </div>
         </div>
         <div class="reveal reveal-left flex items-start gap-4" data-delay="240">
           <div class="w-14 h-14 rounded-2xl bg-fv-lime border-3 border-fv-navy shadow-cartoon-sm flex items-center justify-center font-fredoka font-bold text-fv-navy text-xl flex-shrink-0">B</div>
           <div>
-            <h3 class="font-fredoka font-bold text-fv-navy text-xl mb-1">Baby Facilities</h3>
-            <p class="font-nunito text-fv-navy/65 text-sm leading-relaxed">Changing rooms, a private feeding area, steriliser station, and stroller parking. We've thought of everything.</p>
+            <h3 class="font-fredoka font-bold text-fv-navy text-xl mb-1">Zázemie pre bábätká</h3>
+            <p class="font-nunito text-fv-navy/65 text-sm leading-relaxed">Prebaľovacie miestnosti, súkromný kútik na kŕmenie, sterilizátor a parkovanie pre kočíky. Mysleli sme na všetko.</p>
           </div>
         </div>
       </div>
 
       <!-- Big trust card -->
       <div class="reveal reveal-right" data-delay="100">
-        <div class="bg-fv-navy border-4 border-fv-navy shadow-cartoon-lg rounded-3xl p-10 text-white flex flex-col gap-6">
-          <h3 class="font-fredoka font-bold text-3xl">Safety You Can See</h3>
+        <div class="bg-fv-navy border-4 border-fv-navy shadow-cartoon-lg rounded-3xl p-7 sm:p-10 text-white flex flex-col gap-6">
+          <h3 class="font-fredoka font-bold text-3xl">Bezpečnosť, ktorú vidíte</h3>
           <div class="flex flex-col gap-4">
             <div class="flex items-center gap-3 bg-white/10 rounded-2xl px-4 py-3">
               <span class="font-fredoka font-bold text-fv-lime text-lg">✓</span>
-              <span class="font-nunito text-sm text-white/90">DBS-checked staff, always present</span>
+              <span class="font-nunito text-sm text-white/90">Preverený personál, vždy na mieste</span>
             </div>
             <div class="flex items-center gap-3 bg-white/10 rounded-2xl px-4 py-3">
               <span class="font-fredoka font-bold text-fv-lime text-lg">✓</span>
-              <span class="font-nunito text-sm text-white/90">Fully padded & age-separated zones</span>
+              <span class="font-nunito text-sm text-white/90">Mäkko čalúnené zóny rozdelené podľa veku</span>
             </div>
             <div class="flex items-center gap-3 bg-white/10 rounded-2xl px-4 py-3">
               <span class="font-fredoka font-bold text-fv-lime text-lg">✓</span>
-              <span class="font-nunito text-sm text-white/90">Hourly hygiene sanitisation rounds</span>
+              <span class="font-nunito text-sm text-white/90">Dezinfekcia každú hodinu</span>
             </div>
             <div class="flex items-center gap-3 bg-white/10 rounded-2xl px-4 py-3">
               <span class="font-fredoka font-bold text-fv-lime text-lg">✓</span>
-              <span class="font-nunito text-sm text-white/90">Single entry/exit point for security</span>
+              <span class="font-nunito text-sm text-white/90">Jeden vchod a východ pre vašu bezpečnosť</span>
             </div>
           </div>
-          <a href="#faq" class="font-fredoka font-bold text-fv-navy bg-fv-lime border-3 border-white shadow-cartoon-white px-6 py-3 rounded-full text-center btn-hover btn-lime block">Read Our Safety Policy →</a>
+          <a href="#faq" class="font-fredoka font-bold text-fv-navy bg-fv-lime border-3 border-white shadow-cartoon-white px-6 py-3 rounded-full text-center btn-hover btn-lime block">Naše bezpečnostné pravidlá →</a>
         </div>
       </div>
     </div>
@@ -713,53 +677,53 @@
 <!-- ════════════════════════════════════════════════════
      TESTIMONIALS
 ═════════════════════════════════════════════════════ -->
-<section class="relative overflow-hidden bg-fv-navy section-mid" aria-label="Testimonials">
+<section class="relative overflow-hidden bg-fv-navy section-mid" aria-label="Recenzie">
 
   <div class="absolute top-12 left-[-80px] w-72 h-72 rounded-full border-[10px] pointer-events-none ring-sky" aria-hidden="true"></div>
   <div class="absolute bottom-20 right-[-60px] w-56 h-56 rounded-full border-[8px] pointer-events-none ring-lime" aria-hidden="true"></div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-6">
     <div class="text-center mb-16 reveal">
-      <span class="inline-block bg-fv-lime border-3 border-fv-navy shadow-cartoon-sm px-5 py-2 rounded-full font-fredoka font-bold text-fv-navy text-sm mb-4">Happy Families</span>
+      <span class="inline-block bg-fv-lime border-3 border-fv-navy shadow-cartoon-sm px-5 py-2 rounded-full font-fredoka font-bold text-fv-navy text-sm mb-4">Spokojné rodiny</span>
       <h2 class="font-fredoka font-bold text-white leading-tight heading-section">
-        What Parents Are <span class="text-fv-pink">Saying</span>
+        Čo hovoria <span class="text-fv-pink">rodičia</span>
       </h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 swipe-row" data-dots="light">
 
       <div class="reveal-scale card-lift bg-white border-4 border-fv-sky shadow-cartoon-sky rounded-3xl p-7 flex flex-col gap-4 tilt-neg-15" data-delay="0">
         <div class="flex gap-0.5 text-fv-lime text-xl">★★★★★</div>
-        <p class="font-nunito text-fv-navy/80 text-sm leading-relaxed italic">"Our daughter talks about FunVille non-stop. The staff are incredible, the place is spotless, and the birthday party they hosted was the best we've ever had!"</p>
+        <p class="font-nunito text-fv-navy/80 text-sm leading-relaxed italic">„Naša dcéra o FunVille rozpráva bez prestania. Personál je úžasný, všade je čisto a oslava narodenín, ktorú nám pripravili, bola najlepšia, akú sme kedy mali!“</p>
         <div class="mt-auto flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-fv-sky border-2 border-fv-navy flex items-center justify-center font-fredoka font-bold text-fv-navy">S</div>
+          <div class="w-10 h-10 rounded-full bg-fv-sky border-2 border-fv-navy flex items-center justify-center font-fredoka font-bold text-fv-navy">M</div>
           <div>
-            <div class="font-fredoka font-bold text-fv-navy text-sm">Sarah M.</div>
-            <div class="font-nunito text-fv-navy/50 text-xs">Mum of 2</div>
+            <div class="font-fredoka font-bold text-fv-navy text-sm">Ukážková recenzia</div>
+            <div class="font-nunito text-fv-navy/50 text-xs">mama dvoch detí</div>
           </div>
         </div>
       </div>
 
       <div class="reveal-scale card-lift bg-fv-lime border-4 border-fv-navy shadow-cartoon rounded-3xl p-7 flex flex-col gap-4 tilt-pos-1" data-delay="100">
         <div class="flex gap-0.5 text-fv-navy text-xl">★★★★★</div>
-        <p class="font-nunito text-fv-navy/80 text-sm leading-relaxed italic">"Best rainy-day spot in the city. The café is genuinely good, the Wi-Fi works perfectly, and I can see the kids from my seat the whole time. 10/10."</p>
+        <p class="font-nunito text-fv-navy/80 text-sm leading-relaxed italic">„Najlepšie miesto v meste na daždivý deň. Kaviareň je naozaj dobrá, Wi-Fi funguje bez problémov a zo svojho miesta vidím na deti celý čas. 10/10.“</p>
         <div class="mt-auto flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-fv-pink border-2 border-fv-navy flex items-center justify-center font-fredoka font-bold text-white">J</div>
+          <div class="w-10 h-10 rounded-full bg-fv-pink border-2 border-fv-navy flex items-center justify-center font-fredoka font-bold text-white">O</div>
           <div>
-            <div class="font-fredoka font-bold text-fv-navy text-sm">James K.</div>
-            <div class="font-nunito text-fv-navy/50 text-xs">Dad of 3</div>
+            <div class="font-fredoka font-bold text-fv-navy text-sm">Ukážková recenzia</div>
+            <div class="font-nunito text-fv-navy/50 text-xs">otec troch detí</div>
           </div>
         </div>
       </div>
 
       <div class="reveal-scale card-lift bg-fv-pink border-4 border-fv-navy shadow-cartoon rounded-3xl p-7 flex flex-col gap-4 tilt-neg-05" data-delay="200">
         <div class="flex gap-0.5 text-fv-lime text-xl">★★★★★</div>
-        <p class="font-nunito text-fv-navy/80 text-sm leading-relaxed italic">"We've tried every playground in the area. FunVille is in a league of its own. Clean, safe, and the kids never want to leave. Our new weekly tradition!"</p>
+        <p class="font-nunito text-fv-navy/80 text-sm leading-relaxed italic">„Vyskúšali sme všetky herne v okolí. FunVille je o triedu vyššie. Čisto, bezpečne a deti nikdy nechcú odísť. Naša nová týždenná tradícia!“</p>
         <div class="mt-auto flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-fv-lime border-2 border-fv-navy flex items-center justify-center font-fredoka font-bold text-fv-navy">P</div>
+          <div class="w-10 h-10 rounded-full bg-fv-lime border-2 border-fv-navy flex items-center justify-center font-fredoka font-bold text-fv-navy">M</div>
           <div>
-            <div class="font-fredoka font-bold text-fv-navy text-sm">Priya L.</div>
-            <div class="font-nunito text-fv-navy/50 text-xs">Mum of 1</div>
+            <div class="font-fredoka font-bold text-fv-navy text-sm">Ukážková recenzia</div>
+            <div class="font-nunito text-fv-navy/50 text-xs">mama jedného dieťaťa</div>
           </div>
         </div>
       </div>
@@ -779,15 +743,15 @@
 <!-- ════════════════════════════════════════════════════
      FAQ
 ═════════════════════════════════════════════════════ -->
-<section id="faq" class="relative bg-fv-sky-light overflow-hidden section-std" aria-label="FAQ">
+<section id="faq" class="relative bg-fv-sky-light overflow-hidden section-std" aria-label="Časté otázky">
 
   <div class="absolute top-12 right-[-60px] w-64 h-64 rounded-full bg-fv-sky/30 pointer-events-none" aria-hidden="true"></div>
 
   <div class="relative z-10 max-w-3xl mx-auto px-6">
     <div class="text-center mb-14 reveal">
-      <span class="inline-block bg-fv-sky border-3 border-fv-navy shadow-cartoon-sm px-5 py-2 rounded-full font-fredoka font-bold text-fv-navy text-sm mb-4">Got Questions?</span>
+      <span class="inline-block bg-fv-sky border-3 border-fv-navy shadow-cartoon-sm px-5 py-2 rounded-full font-fredoka font-bold text-fv-navy text-sm mb-4">Máte otázky?</span>
       <h2 class="font-fredoka font-bold text-fv-navy leading-tight heading-section">
-        Quick <span class="text-fv-pink">Answers</span>
+        Rýchle <span class="text-fv-pink">odpovede</span>
       </h2>
     </div>
 
@@ -795,61 +759,61 @@
 
       <div class="reveal faq-item bg-white border-4 border-fv-navy shadow-cartoon rounded-2xl overflow-hidden" data-delay="0">
         <button class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
-          <span class="font-fredoka font-bold text-fv-navy text-lg">Do I need to book in advance?</span>
+          <span class="font-fredoka font-bold text-fv-navy text-lg">Musím si vstup rezervovať vopred?</span>
           <span class="faq-arrow text-fv-navy text-xl font-bold flex-shrink-0">▾</span>
         </button>
         <div class="faq-body px-6">
-          <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed pb-5">Walk-ins are welcome but we recommend booking online to guarantee your slot, especially at weekends and during school holidays. Booking takes less than 2 minutes!</p>
+          <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed pb-5">Prísť môžete aj bez rezervácie, no odporúčame si termín zarezervovať online, najmä cez víkendy a školské prázdniny. Rezervácia trvá menej ako 2 minúty!</p>
         </div>
       </div>
 
       <div class="reveal faq-item bg-fv-lime border-4 border-fv-navy shadow-cartoon rounded-2xl overflow-hidden" data-delay="60">
         <button class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
-          <span class="font-fredoka font-bold text-fv-navy text-lg">What ages is FunVille suitable for?</span>
+          <span class="font-fredoka font-bold text-fv-navy text-lg">Pre deti akého veku je FunVille?</span>
           <span class="faq-arrow text-fv-navy text-xl font-bold flex-shrink-0">▾</span>
         </button>
         <div class="faq-body px-6">
-          <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed pb-5">FunVille is designed for children aged 0–12. We have a dedicated Toddler Town for under-4s with soft, safe equipment, and bigger zones for older adventurers. Under-2s are free!</p>
+          <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed pb-5">FunVille je pre deti vo veku 0 – 15 rokov. Najmenší do 4 rokov majú vlastné Mestečko pre najmenších s mäkkým a bezpečným vybavením, starší dobrodruhovia sa vyšantia v Lezeckom kráľovstve. Deti do 2 rokov majú vstup zdarma!</p>
         </div>
       </div>
 
       <div class="reveal faq-item bg-fv-sky border-4 border-fv-navy shadow-cartoon rounded-2xl overflow-hidden" data-delay="120">
         <button class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
-          <span class="font-fredoka font-bold text-fv-navy text-lg">What should kids wear?</span>
+          <span class="font-fredoka font-bold text-fv-navy text-lg">Čo si majú deti obliecť?</span>
           <span class="faq-arrow text-fv-navy text-xl font-bold flex-shrink-0">▾</span>
         </button>
         <div class="faq-body px-6">
-          <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed pb-5">Comfortable clothes and grip socks are required for all children. Grip socks are available to purchase at reception for £2.50 if you forget yours. Adults must remove shoes before entering play zones.</p>
+          <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed pb-5">Všetky deti potrebujú pohodlné oblečenie a protišmykové ponožky. Ak ich zabudnete, kúpite ich na recepcii za 2,50 €. Dospelí sa pred vstupom do herných zón musia vyzuť.</p>
         </div>
       </div>
 
       <div class="reveal faq-item bg-white border-4 border-fv-navy shadow-cartoon rounded-2xl overflow-hidden" data-delay="180">
         <button class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
-          <span class="font-fredoka font-bold text-fv-navy text-lg">Can I bring my own food?</span>
+          <span class="font-fredoka font-bold text-fv-navy text-lg">Môžem si priniesť vlastné jedlo?</span>
           <span class="faq-arrow text-fv-navy text-xl font-bold flex-shrink-0">▾</span>
         </button>
         <div class="faq-body px-6">
-          <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed pb-5">You're welcome to bring snacks and drinks for children. We ask that you eat in the café area, not in the play zones. Our café also serves freshly made food and snacks at great prices.</p>
+          <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed pb-5">Desiatu a nápoje pre deti si pokojne doneste. Prosíme však, aby ste jedli v priestore kaviarne, nie v herných zónach. Naša kaviareň ponúka aj čerstvo pripravené jedlá a občerstvenie za výborné ceny.</p>
         </div>
       </div>
 
       <div class="reveal faq-item bg-fv-pink border-4 border-fv-navy shadow-cartoon rounded-2xl overflow-hidden" data-delay="240">
         <button class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
-          <span class="font-fredoka font-bold text-fv-navy text-lg">How do I book a birthday party?</span>
+          <span class="font-fredoka font-bold text-fv-navy text-lg">Ako si rezervujem narodeninovú oslavu?</span>
           <span class="faq-arrow text-fv-navy text-xl font-bold flex-shrink-0">▾</span>
         </button>
         <div class="faq-body px-6">
-          <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed pb-5">Simply pick a package above and click Reserve, or contact our party team directly at parties@funville.co. We recommend booking at least 4 weeks in advance for weekend dates. A 25% deposit secures your booking.</p>
+          <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed pb-5">Stačí vybrať balíček vyššie a kliknúť na Rezervovať, alebo nás kontaktovať priamo na parties@funville.co. Víkendové termíny odporúčame rezervovať aspoň 4 týždne vopred. Rezerváciu potvrdíte zálohou 25 %.</p>
         </div>
       </div>
 
       <div class="reveal faq-item bg-fv-lime border-4 border-fv-navy shadow-cartoon rounded-2xl overflow-hidden" data-delay="300">
         <button class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
-          <span class="font-fredoka font-bold text-fv-navy text-lg">Is there parking?</span>
+          <span class="font-fredoka font-bold text-fv-navy text-lg">Dá sa u vás zaparkovať?</span>
           <span class="faq-arrow text-fv-navy text-xl font-bold flex-shrink-0">▾</span>
         </button>
         <div class="faq-body px-6">
-          <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed pb-5">Yes! Free parking is available directly adjacent to FunVille with 80 spaces including 6 accessible bays. We're also a 5-minute walk from the town centre bus stops.</p>
+          <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed pb-5">Áno! Priamo pri FunVille je bezplatné parkovisko s 80 miestami vrátane 6 miest pre ľudí so zdravotným postihnutím. Od autobusových zastávok v centre mesta sme len 5 minút pešo.</p>
         </div>
       </div>
 
@@ -868,25 +832,25 @@
 <!-- ════════════════════════════════════════════════════
      FINAL CTA
 ═════════════════════════════════════════════════════ -->
-<section id="book" class="relative overflow-hidden bg-fv-pink section-tall" aria-label="Book now">
+<section id="book" class="relative overflow-hidden bg-fv-pink section-tall" aria-label="Rezervácia">
 
   <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
     <div class="reveal">
       <h2 class="font-fredoka font-bold text-white leading-tight mb-4 heading-cta">
-        Ready for the<br><span class="text-fv-lime">Best Day Ever?</span>
+        Pripravení na<br><span class="text-fv-lime">najlepší deň?</span>
       </h2>
       <p class="font-nunito text-white/80 text-lg mb-10 max-w-lg mx-auto">
-        Book your visit today and give your family a day full of laughter, adventure, and unforgettable memories.
+        Rezervujte si návštevu ešte dnes a doprajte svojej rodine deň plný smiechu, dobrodružstva a nezabudnuteľných zážitkov.
       </p>
       <div class="flex flex-wrap gap-5 justify-center">
         <a href="#contact" class="font-fredoka font-bold text-white bg-fv-navy border-4 border-white shadow-cartoon-white text-xl px-10 py-4 rounded-full inline-flex items-center gap-2 btn-hover btn-pink">
-          Book a Visit
+          Rezervovať návštevu
         </a>
         <a href="#birthday" class="font-fredoka font-bold text-fv-navy bg-white border-4 border-fv-navy shadow-cartoon text-xl px-10 py-4 rounded-full inline-flex items-center gap-2 btn-hover btn-white">
-          Plan a Birthday
+          Naplánovať oslavu
         </a>
         <a href="#contact" class="font-fredoka font-bold text-fv-navy bg-fv-lime border-4 border-fv-navy shadow-cartoon-lime text-xl px-10 py-4 rounded-full inline-flex items-center gap-2 btn-hover btn-lime">
-          Gift Voucher
+          Darčeková poukážka
         </a>
       </div>
     </div>
@@ -904,7 +868,7 @@
 <!-- ════════════════════════════════════════════════════
      FOOTER
 ═════════════════════════════════════════════════════ -->
-<footer id="contact" class="relative bg-fv-navy overflow-hidden section-footer" aria-label="Footer">
+<footer id="contact" class="relative bg-fv-navy overflow-hidden section-footer" aria-label="Päta stránky">
 
   <div class="absolute top-10 right-[-60px] w-56 h-56 rounded-full border-[8px] pointer-events-none ring-sky-faint" aria-hidden="true"></div>
 
@@ -914,54 +878,56 @@
       <!-- Brand -->
       <div class="lg:col-span-1">
         <div class="mb-4">
-          <img src="img/funville_logo_R_dominik.png" alt="FunVille" class="h-12 w-auto brightness-0 invert" />
+          <img src="img/funville_logo_footer.png" alt="FunVille" class="w-16 h-auto" width="640" height="303" />
         </div>
-        <p class="font-nunito text-white/60 text-sm leading-relaxed mb-5">The ultimate indoor playground experience for the whole family. Come rain or shine.</p>
+        <p class="font-nunito text-white/60 text-sm leading-relaxed mb-5">Zábava pod strechou pre celú rodinu. Za dažďa aj za slnka.</p>
         <div class="flex gap-3">
-          <a href="#" class="w-10 h-10 rounded-full bg-white/10 border-2 border-white/20 flex items-center justify-center text-white hover:bg-fv-pink transition-colors font-bold text-sm" aria-label="Facebook">f</a>
-          <a href="#" class="w-10 h-10 rounded-full bg-white/10 border-2 border-white/20 flex items-center justify-center text-white hover:bg-fv-pink transition-colors font-bold text-sm" aria-label="Instagram">ig</a>
-          <a href="#" class="w-10 h-10 rounded-full bg-white/10 border-2 border-white/20 flex items-center justify-center text-white hover:bg-fv-pink transition-colors font-bold text-sm" aria-label="TikTok">tt</a>
+          <a href="https://www.facebook.com/FunVilleSK/" target="_blank" rel="noopener" class="social-btn" aria-label="FunVille na Facebooku">
+            <span class="social-icon social-icon-facebook" aria-hidden="true"></span>
+          </a>
+          <a href="https://www.instagram.com/funvillesk/" target="_blank" rel="noopener" class="social-btn" aria-label="FunVille na Instagrame">
+            <span class="social-icon social-icon-instagram" aria-hidden="true"></span>
+          </a>
         </div>
       </div>
 
       <!-- Quick links -->
       <div>
-        <h4 class="font-fredoka font-bold text-white text-lg mb-4">Quick Links</h4>
+        <h4 class="font-fredoka font-bold text-white text-lg mb-4">Rýchle odkazy</h4>
         <ul class="flex flex-col gap-2">
-          <li><a href="#zones"    class="font-nunito text-white/60 text-sm hover:text-fv-lime transition-colors">Play Zones</a></li>
-          <li><a href="#birthday" class="font-nunito text-white/60 text-sm hover:text-fv-lime transition-colors">Birthday Parties</a></li>
-          <li><a href="#pricing"  class="font-nunito text-white/60 text-sm hover:text-fv-lime transition-colors">Pricing &amp; Tickets</a></li>
-          <li><a href="#contact"  class="font-nunito text-white/60 text-sm hover:text-fv-lime transition-colors">Gift Vouchers</a></li>
-          <li><a href="#faq"      class="font-nunito text-white/60 text-sm hover:text-fv-lime transition-colors">FAQ</a></li>
+          <li><a href="#zones"    class="font-nunito text-white/60 text-sm hover:text-fv-lime transition-colors">Herné zóny</a></li>
+          <li><a href="#birthday" class="font-nunito text-white/60 text-sm hover:text-fv-lime transition-colors">Narodeninové oslavy</a></li>
+          <li><a href="#pricing"  class="font-nunito text-white/60 text-sm hover:text-fv-lime transition-colors">Cenník a vstupné</a></li>
+          <li><a href="#contact"  class="font-nunito text-white/60 text-sm hover:text-fv-lime transition-colors">Darčekové poukážky</a></li>
+          <li><a href="#faq"      class="font-nunito text-white/60 text-sm hover:text-fv-lime transition-colors">Časté otázky</a></li>
         </ul>
       </div>
 
       <!-- Visit -->
       <div>
-        <h4 class="font-fredoka font-bold text-white text-lg mb-4">Visit Us</h4>
-        <img src="img/funville_kontakt.png" alt="FunVille contact details — phone, email, address" class="w-full max-w-xs rounded-2xl mb-3" loading="lazy" />
+        <h4 class="font-fredoka font-bold text-white text-lg mb-4">Navštívte nás</h4>
         <ul class="flex flex-col gap-2">
           <li class="flex items-start gap-2">
-            <span class="font-nunito text-white/60 text-sm">Mon–Fri: 9am – 6pm<br>Sat–Sun: 8:30am – 7pm</span>
+            <span class="font-nunito text-white/60 text-sm">Po – Pi: 9:00 – 18:00<br>So – Ne: 8:30 – 19:00</span>
           </li>
         </ul>
       </div>
 
       <!-- Newsletter -->
       <div>
-        <h4 class="font-fredoka font-bold text-white text-lg mb-4">Stay in the Loop</h4>
-        <p class="font-nunito text-white/60 text-sm mb-4">Get exclusive offers, event news, and birthday discounts.</p>
+        <h4 class="font-fredoka font-bold text-white text-lg mb-4">Buďte v obraze</h4>
+        <p class="font-nunito text-white/60 text-sm mb-4">Získajte exkluzívne ponuky, novinky o podujatiach a zľavy na oslavy.</p>
         <form class="flex flex-col gap-3" onsubmit="return false;">
           <input
             type="email"
-            placeholder="your@email.com"
+            placeholder="vas@email.sk" aria-label="Váš e-mail"
             class="w-full bg-white/10 border-2 border-white/20 text-white placeholder-white/40 px-4 py-3 rounded-2xl font-nunito text-sm focus:outline-none focus:border-fv-lime transition-colors"
           />
           <button
             type="submit"
             class="bg-fv-lime border-3 border-white shadow-cartoon-white text-fv-navy font-fredoka font-bold px-5 py-3 rounded-full btn-hover btn-lime"
           >
-            Subscribe
+            Odoberať novinky
           </button>
         </form>
       </div>
@@ -969,11 +935,11 @@
     </div>
 
     <div class="flex flex-col sm:flex-row items-center justify-between gap-3 py-6">
-      <p class="font-nunito text-white/40 text-xs">© 2026 FunVille Indoor Playground. All rights reserved.</p>
-      <div class="flex gap-5">
-        <a href="#" class="font-nunito text-white/40 text-xs hover:text-white/70 transition-colors">Privacy Policy</a>
-        <a href="#" class="font-nunito text-white/40 text-xs hover:text-white/70 transition-colors">Terms of Use</a>
-        <a href="#" class="font-nunito text-white/40 text-xs hover:text-white/70 transition-colors">Accessibility</a>
+      <p class="font-nunito text-white/40 text-xs">© 2026 FunVille – detská herňa. Všetky práva vyhradené.</p>
+      <div class="flex flex-wrap justify-center gap-x-5 gap-y-2">
+        <a href="#" class="font-nunito text-white/40 text-xs hover:text-white/70 transition-colors">Ochrana osobných údajov</a>
+        <a href="#" class="font-nunito text-white/40 text-xs hover:text-white/70 transition-colors">Podmienky používania</a>
+        <a href="#" class="font-nunito text-white/40 text-xs hover:text-white/70 transition-colors">Prístupnosť</a>
       </div>
     </div>
   </div>
