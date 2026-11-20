@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FunVille — The Ultimate Indoor Playground</title>
+  <meta name="description" content="FunVille is the ultimate indoor playground for curious, energetic kids. Book a visit or plan a birthday party today!" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN with custom config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'fv-sky':        '#63CCF5',
+            'fv-sky-light':  '#EAF7FE',
+            'fv-sky-mid':    '#C8EDFB',
+            'fv-pink':       '#EC508C',
+            'fv-pink-light': '#FDEEF4',
+            'fv-lime':       '#D6DF2D',
+            'fv-lime-light': '#F7F9D5',
+            'fv-navy':       '#0A2D61',
+            'fv-navy-dark':  '#071e45',
+            'fv-navy-light': '#1A4080',
+          },
+          fontFamily: {
+            fredoka: ['Fredoka', 'sans-serif'],
+            nunito:  ['Nunito Sans', 'sans-serif'],
+          },
+          borderRadius: {
+            '4xl': '2rem',
+            '5xl': '2.5rem',
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="font-nunito">
+
+<!-- ════════════════════════════════════════════════════
+     ANNOUNCE BAR
+═════════════════════════════════════════════════════ -->
+<div class="fixed top-0 left-0 right-0 bg-fv-navy text-white text-center py-2.5 px-4 font-nunito text-xs font-semibold tracking-wide z-[70]">
+  Summer Holiday Special — Kids go free with a full-price adult! &nbsp;|&nbsp;
+  <a href="#pricing" class="underline text-fv-lime hover:text-white transition-colors">See Pricing →</a>
+</div>
+
+<!-- ════════════════════════════════════════════════════
+     NAVBAR
+═════════════════════════════════════════════════════ -->
+<nav
+  class="fixed top-8 left-0 right-0 z-50 bg-white nav-shadow"
+  role="navigation"
+  aria-label="Main navigation"
+>
+  <div class="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="#" class="flex items-center" aria-label="FunVille home">
+      <img src="img/funville_logo_R_dominik.png" alt="FunVille" class="h-20 w-auto" />
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="hidden lg:flex items-center gap-1" role="list">
+      <li><a href="#zones"    class="font-nunito font-semibold text-fv-navy/75 hover:text-fv-navy px-4 py-2 rounded-full hover:bg-fv-sky-light transition-all text-sm">Play Zones</a></li>
+      <li><a href="#birthday" class="font-nunito font-semibold text-fv-navy/75 hover:text-fv-navy px-4 py-2 rounded-full hover:bg-fv-sky-light transition-all text-sm">Parties</a></li>
+      <li><a href="#pricing"  class="font-nunito font-semibold text-fv-navy/75 hover:text-fv-navy px-4 py-2 rounded-full hover:bg-fv-sky-light transition-all text-sm">Pricing</a></li>
+      <li><a href="#faq"      class="font-nunito font-semibold text-fv-navy/75 hover:text-fv-navy px-4 py-2 rounded-full hover:bg-fv-sky-light transition-all text-sm">FAQ</a></li>
+      <li><a href="#contact"  class="font-nunito font-semibold text-fv-navy/75 hover:text-fv-navy px-4 py-2 rounded-full hover:bg-fv-sky-light transition-all text-sm">Contact</a></li>
+    </ul>
+
+    <!-- Book Now CTA -->
+    <div class="hidden lg:block">
+      <a href="#book" class="font-fredoka font-bold text-fv-navy bg-fv-lime border-3 border-fv-navy px-6 py-2.5 rounded-full shadow-cartoon-sm text-sm inline-block btn-hover btn-lime">
+        Book Now
+      </a>
+    </div>
+
+    <!-- Hamburger -->
+    <button
+      id="hamburger"
+      class="lg:hidden flex flex-col gap-[5px] p-2 cursor-pointer border-none bg-transparent"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      <span class="ham-bar block w-6 h-[2.5px] bg-fv-navy rounded-full transition-all duration-200 origin-center"></span>
+      <span class="ham-bar block w-6 h-[2.5px] bg-fv-navy rounded-full transition-all duration-200 origin-center"></span>
+      <span class="ham-bar block w-6 h-[2.5px] bg-fv-navy rounded-full transition-all duration-200 origin-center"></span>
+    </button>
+  </div>
+
+  <!-- Cloud edge — extends below nav -->
+  <svg
+    viewBox="0 0 1440 56"
+    xmlns="http://www.w3.org/2000/svg"
+    class="absolute left-0 w-full pointer-events-none cloud-edge"
+    preserveAspectRatio="none"
+    aria-hidden="true"
+  >
+    <ellipse cx="40"   cy="56" rx="72"  ry="50" fill="white" />
+    <ellipse cx="130"  cy="56" rx="95"  ry="56" fill="white" />
+    <ellipse cx="240"  cy="56" rx="80"  ry="44" fill="white" />
+    <ellipse cx="340"  cy="56" rx="100" ry="56" fill="white" />
+    <ellipse cx="455"  cy="56" rx="88"  ry="48" fill="white" />
+    <ellipse cx="560"  cy="56" rx="76"  ry="42" fill="white" />
+    <ellipse cx="660"  cy="56" rx="98"  ry="56" fill="white" />
+    <ellipse cx="770"  cy="56" rx="84"  ry="46" fill="white" />
+    <ellipse cx="870"  cy="56" rx="92"  ry="52" fill="white" />
+    <ellipse cx="975"  cy="56" rx="78"  ry="44" fill="white" />
+    <ellipse cx="1075" cy="56" rx="96"  ry="54" fill="white" />
+    <ellipse cx="1185" cy="56" rx="82"  ry="46" fill="white" />
+    <ellipse cx="1290" cy="56" rx="100" ry="56" fill="white" />
+    <ellipse cx="1390" cy="56" rx="86"  ry="48" fill="white" />
+  </svg>
+</nav>
+
+<!-- Mobile Menu -->
+<div
+  id="mobile-menu"
+  class="fixed inset-0 z-40 bg-white flex flex-col items-center justify-center gap-5 pt-20"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Mobile navigation"
+>
+  <div class="absolute top-28 left-8 w-36 h-20 bg-fv-sky-light rounded-full opacity-60 animate-cloud-drift" aria-hidden="true"></div>
+  <div class="absolute top-40 right-6 w-28 h-16 bg-fv-lime-light rounded-full opacity-60 animate-cloud-drift delay-1000" aria-hidden="true"></div>
+  <a href="#zones"    onclick="closeMobileMenu()" class="font-fredoka text-2xl font-bold text-fv-navy hover:text-fv-pink transition-colors">Play Zones</a>
+  <a href="#birthday" onclick="closeMobileMenu()" class="font-fredoka text-2xl font-bold text-fv-navy hover:text-fv-pink transition-colors">Parties</a>
+  <a href="#pricing"  onclick="closeMobileMenu()" class="font-fredoka text-2xl font-bold text-fv-navy hover:text-fv-pink transition-colors">Pricing</a>
+  <a href="#faq"      onclick="closeMobileMenu()" class="font-fredoka text-2xl font-bold text-fv-navy hover:text-fv-pink transition-colors">FAQ</a>
+  <a href="#contact"  onclick="closeMobileMenu()" class="font-fredoka text-2xl font-bold text-fv-navy hover:text-fv-pink transition-colors">Visit Us</a>
+  <a href="#book"     onclick="closeMobileMenu()" class="mt-4 font-fredoka font-bold text-fv-navy bg-fv-lime border-4 border-fv-navy px-10 py-4 rounded-full shadow-cartoon text-xl btn-hover btn-lime">
+    Book a Visit
+  </a>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════
+     HERO
+═════════════════════════════════════════════════════ -->
+<section
+  class="relative min-h-screen flex items-center overflow-hidden bg-fv-sky section-hero"
+  aria-label="Welcome to FunVille"
+>
+  <!-- Background photo -->
+  <div class="absolute inset-0 pointer-events-none hero-bg-img" aria-hidden="true"></div>
+  <!-- Gradient overlay: transparent left → solid sky-blue right -->
+  <div class="absolute inset-0 pointer-events-none hero-overlay" aria-hidden="true"></div>
+
+  <!-- Floating shapes -->
+
+  <!-- Big pink 5-point star, top-left -->
+  <svg class="absolute pointer-events-none select-none animate-float" style="top:16%;left:2%;width:82px;height:82px;" viewBox="0 0 100 100" aria-hidden="true">
+    <path d="M50,5 L60.6,35.4 L92.8,36.1 L67.1,55.6 L76.4,86.4 L50,68 L23.6,86.4 L32.9,55.6 L7.2,36.1 L39.4,35.4 Z"
+          fill="#EC508C" stroke="#0A2D61" stroke-width="4.5" stroke-linejoin="round"/>
+  </svg>
+
+
+  <!-- Sky blue triangle, mid-left -->
+  <svg class="absolute pointer-events-none select-none animate-float-rot delay-800" style="top:54%;left:2%;width:70px;height:70px;" viewBox="0 0 100 100" aria-hidden="true">
+    <polygon points="50,8 94,88 6,88" fill="#63CCF5" stroke="#0A2D61" stroke-width="5" stroke-linejoin="round"/>
+  </svg>
+
+  <!-- Lime rotated diamond square, left -->
+  <svg class="absolute pointer-events-none select-none animate-float delay-1200" style="top:28%;left:11%;width:46px;height:46px;" viewBox="0 0 100 100" aria-hidden="true">
+    <rect x="18" y="18" width="64" height="64" rx="8" fill="#D6DF2D" stroke="#0A2D61" stroke-width="6" transform="rotate(45 50 50)"/>
+  </svg>
+
+  <!-- Filled pink circle, left -->
+  <svg class="absolute pointer-events-none select-none animate-float delay-1500" style="top:74%;left:18%;width:44px;height:44px;" viewBox="0 0 100 100" aria-hidden="true">
+    <circle cx="50" cy="50" r="40" fill="#EC508C" stroke="#0A2D61" stroke-width="6"/>
+  </svg>
+
+  <!-- Content — right-aligned column -->
+  <div class="relative w-full max-w-7xl mx-auto px-6 flex hero-content">
+    <div class="ml-auto w-full max-w-lg xl:max-w-xl hero-entrance">
+
+      <!-- Open badge -->
+      <div class="inline-flex items-center gap-2 bg-white border-3 border-fv-navy shadow-cartoon-sm px-5 py-2 rounded-full mb-7 font-nunito text-sm font-bold text-fv-navy">
+        <span class="w-2.5 h-2.5 rounded-full bg-fv-lime border-2 border-fv-navy inline-block animate-pulse-sm" aria-hidden="true"></span>
+        Open 7 Days · Ages 0–12 · Always Indoors
+      </div>
+
+      <!-- Welcome to -->
+      <p class="font-fredoka font-bold text-white mb-1 hero-welcome">
+        Welcome to
+      </p>
+
+      <!-- FunVille! bouncing -->
+      <h1
+        class="font-fredoka font-bold leading-none mb-6 hero-title"
+        aria-label="FunVille!"
+      >
+        <span id="hero-word-1" class="text-fv-navy" aria-hidden="true"></span><!--
+        --><span id="hero-word-2" class="text-white" aria-hidden="true"></span><!--
+        --><span id="hero-word-3" class="text-fv-lime" aria-hidden="true"></span>
+      </h1>
+
+      <!-- CTAs -->
+      <div class="flex flex-wrap gap-4 mb-12">
+        <a
+          href="#book"
+          class="font-fredoka font-bold text-white bg-fv-pink border-4 border-fv-navy shadow-cartoon text-xl px-8 py-4 rounded-full inline-flex items-center gap-2 btn-hover btn-pink"
+        >
+          Book a Visit
+        </a>
+        <a
+          href="#birthday"
+          class="font-fredoka font-bold text-fv-navy bg-white border-4 border-fv-navy shadow-cartoon-lime text-xl px-8 py-4 rounded-full inline-flex items-center gap-2 btn-hover btn-white"
+        >
+          Plan a Birthday
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Marquee badges — full width at bottom -->
+  <div class="absolute left-0 right-0 marquee-wrap" aria-label="FunVille highlights">
+    <div id="marquee-track" class="flex whitespace-nowrap gap-3 marquee-track">
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Always Indoors</span>
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Safety First</span>
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Sparkling Clean</span>
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">4.9 Star Rated</span>
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Open 7 Days</span>
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Ages 0–12</span>
+      <!-- duplicate -->
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Always Indoors</span>
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Safety First</span>
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Sparkling Clean</span>
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">4.9 Star Rated</span>
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Open 7 Days</span>
+      <span class="inline-flex items-center gap-1.5 bg-white/25 border-2 border-white/60 text-white px-5 py-2 rounded-full text-sm font-semibold font-nunito flex-shrink-0 backdrop-blur-sm">Ages 0–12</span>
+    </div>
+  </div>
+
+  <!-- Ground bridge → into stats/why -->
+  <div class="absolute bottom-0 left-0 right-0 pointer-events-none bridge-wrap" aria-hidden="true">
+    <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" class="w-full bridge-svg" preserveAspectRatio="none">
+      <path d="M0,100 L0,55 C120,30 240,75 360,55 C480,35 600,70 720,52 C840,34 960,72 1080,54 C1200,36 1320,68 1440,52 L1440,100 Z" fill="#D6DF2D"/>
+      <path d="M0,100 L0,70 C120,48 240,86 360,70 C480,54 600,82 720,68 C840,54 960,84 1080,70 C1200,56 1320,80 1440,70 L1440,100 Z" fill="rgba(255,255,255,.18)"/>
+    </svg>
+    <!-- Bouncing balls -->
+    <div class="absolute animate-float"        style="bottom:1rem;left:8%;"><div class="w-20 h-20 rounded-full bg-fv-pink border-4 border-fv-navy shadow-cartoon"></div></div>
+    <div class="absolute animate-float delay-400" style="bottom:2rem;left:28%;"><div class="w-24 h-24 rounded-full bg-fv-sky border-4 border-fv-navy shadow-cartoon"></div></div>
+    <div class="absolute animate-float delay-200" style="bottom:.75rem;left:50%;transform:translateX(-50%);"><div class="w-28 h-28 rounded-full bg-fv-lime border-4 border-fv-navy shadow-cartoon"></div></div>
+    <div class="absolute animate-float delay-600" style="bottom:2rem;right:28%;"><div class="w-24 h-24 rounded-full bg-white border-4 border-fv-navy shadow-cartoon"></div></div>
+    <div class="absolute animate-float delay-1000" style="bottom:1rem;right:8%;"><div class="w-20 h-20 rounded-full bg-fv-pink border-4 border-fv-navy shadow-cartoon"></div></div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════
+     STATS BAR
+═════════════════════════════════════════════════════ -->
+<section class="relative bg-fv-lime section-stats" aria-label="FunVille stats">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="reveal" data-delay="0">
+        <div class="font-fredoka font-bold text-fv-navy heading-stats" data-counter="2500" data-suffix="+">0</div>
+        <div class="font-nunito font-semibold text-fv-navy/70 text-sm mt-1">Happy Families</div>
+      </div>
+      <div class="reveal" data-delay="80">
+        <div class="font-fredoka font-bold text-fv-navy heading-stats" data-counter="6" data-suffix="">0</div>
+        <div class="font-nunito font-semibold text-fv-navy/70 text-sm mt-1">Play Zones</div>
+      </div>
+      <div class="reveal" data-delay="160">
+        <div class="font-fredoka font-bold text-fv-navy heading-stats" data-counter="4" data-suffix=".9★">0</div>
+        <div class="font-nunito font-semibold text-fv-navy/70 text-sm mt-1">Average Rating</div>
+      </div>
+      <div class="reveal" data-delay="240">
+        <div class="font-fredoka font-bold text-fv-navy heading-stats" data-counter="7" data-suffix=" days">0</div>
+        <div class="font-nunito font-semibold text-fv-navy/70 text-sm mt-1">Open Every Week</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bridge into Why section -->
+  <div class="absolute bottom-0 left-0 right-0 pointer-events-none bridge-wrap-plain" aria-hidden="true">
+    <svg viewBox="0 0 1440 50" xmlns="http://www.w3.org/2000/svg" class="w-full bridge-svg-plain" preserveAspectRatio="none">
+      <path d="M0,50 L0,15 C360,45 720,5 1080,30 C1260,42 1380,18 1440,25 L1440,50 Z" fill="white"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════
+     WHY FUNVILLE
+═════════════════════════════════════════════════════ -->
+<section class="relative bg-white overflow-hidden section-std" aria-label="Why FunVille">
+
+  <!-- Decorative blobs -->
+  <div class="absolute top-20 right-[-80px] w-72 h-72 rounded-full bg-fv-sky-light border-4 border-fv-sky opacity-60 pointer-events-none" aria-hidden="true"></div>
+  <div class="absolute bottom-40 left-[-60px] w-56 h-56 rounded-full bg-fv-pink-light border-4 border-fv-pink opacity-50 pointer-events-none" aria-hidden="true"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6">
+    <div class="flex flex-col lg:flex-row items-center gap-10 mb-16">
+      <div class="text-center lg:text-left reveal lg:w-1/2">
+        <span class="inline-block bg-fv-lime border-3 border-fv-navy shadow-cartoon-sm px-5 py-2 rounded-full font-fredoka font-bold text-fv-navy text-sm mb-4">Why Families Choose Us</span>
+        <h2 class="font-fredoka font-bold text-fv-navy leading-tight heading-section">
+          Six Reasons to <span class="text-fv-pink">Fall in Love</span>
+        </h2>
+      </div>
+      <div class="reveal reveal-right lg:w-1/2 flex justify-center">
+        <img
+          src="img/funville_deti.png"
+          alt="Happy child playing at FunVille"
+          class="w-72 h-auto animate-float"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div class="reveal card-lift bg-fv-sky border-4 border-fv-navy shadow-cartoon rounded-3xl p-8 flex flex-col gap-4 tilt-neg-2" data-delay="0">
+        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">Safety First</h3>
+        <p class="font-nunito text-fv-navy/75 text-sm leading-relaxed">Fully padded surfaces, trained staff on every level, and constant zone supervision so you can actually relax.</p>
+      </div>
+
+      <div class="reveal card-lift bg-fv-lime border-4 border-fv-navy shadow-cartoon rounded-3xl p-8 flex flex-col gap-4 tilt-pos-15" data-delay="80">
+        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">Sparkling Clean</h3>
+        <p class="font-nunito text-fv-navy/75 text-sm leading-relaxed">Deep-cleaned daily, sanitised throughout the day. We take hygiene as seriously as the fun.</p>
+      </div>
+
+      <div class="reveal card-lift bg-fv-pink border-4 border-fv-navy shadow-cartoon rounded-3xl p-8 flex flex-col gap-4 tilt-neg-1" data-delay="160">
+        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">Rain or Shine</h3>
+        <p class="font-nunito text-fv-navy/75 text-sm leading-relaxed">Fully indoors — zero weather cancellations. The perfect rainy-day plan that always delivers.</p>
+      </div>
+
+      <div class="reveal card-lift bg-white border-4 border-fv-navy shadow-cartoon rounded-3xl p-8 flex flex-col gap-4 tilt-pos-2" data-delay="0">
+        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">Parents Love It Too</h3>
+        <p class="font-nunito text-fv-navy/75 text-sm leading-relaxed">Comfy seating, great café, free Wi-Fi, and full sightlines to every zone. Your comfort matters.</p>
+      </div>
+
+      <div class="reveal card-lift bg-fv-sky border-4 border-fv-navy shadow-cartoon rounded-3xl p-8 flex flex-col gap-4 tilt-neg-15" data-delay="80">
+        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">Birthday Magic</h3>
+        <p class="font-nunito text-fv-navy/75 text-sm leading-relaxed">Dedicated party rooms, custom packages, and a team that makes every celebration unforgettable.</p>
+      </div>
+
+      <div class="reveal card-lift bg-fv-lime border-4 border-fv-navy shadow-cartoon rounded-3xl p-8 flex flex-col gap-4 tilt-pos-1" data-delay="160">
+        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">4.9 Star Rated</h3>
+        <p class="font-nunito text-fv-navy/75 text-sm leading-relaxed">Hundreds of happy families can't be wrong. We're the #1 rated indoor play venue in the city.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bridge into Zones (pink) -->
+  <div class="absolute bottom-0 left-0 right-0 pointer-events-none bridge-wrap" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" class="w-full bridge-svg" preserveAspectRatio="none">
+      <path d="M0,90 L0,30 C200,60 400,10 600,40 C800,70 1000,15 1200,42 C1320,57 1380,28 1440,35 L1440,90 Z" fill="#EC508C"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════
+     ZONES
+═════════════════════════════════════════════════════ -->
+<section id="zones" class="relative overflow-hidden bg-fv-pink section-tall" aria-label="Play zones">
+
+  <div class="absolute top-[20px] right-[-120px] w-96 h-96 rounded-full pointer-events-none blob-white" aria-hidden="true"></div>
+  <div class="absolute bottom-32 left-[-80px] w-72 h-72 rounded-full pointer-events-none blob-navy" aria-hidden="true"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16 reveal">
+      <span class="inline-block bg-fv-navy border-3 border-white shadow-cartoon-white px-5 py-2 rounded-full font-fredoka font-bold text-white text-sm mb-4">Explore The Playground</span>
+      <h2 class="font-fredoka font-bold text-white leading-tight heading-section">
+        Six Amazing <span class="text-fv-lime">Play Zones</span>
+      </h2>
+      <p class="font-nunito text-white/80 mt-3 mx-auto max-w-lg">Every corner of FunVille is designed to spark imagination and get those little bodies moving.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div class="reveal-scale card-lift bg-fv-sky border-4 border-fv-navy shadow-cartoon rounded-3xl p-7 flex flex-col gap-3 tilt-neg-1" data-delay="0">
+        <div class="flex items-start justify-between gap-3">
+          <span class="bg-fv-lime border-2 border-fv-navy px-3 py-1 rounded-full font-nunito text-xs font-bold text-fv-navy flex-shrink-0">Ages 4–12</span>
+        </div>
+        <h3 class="font-fredoka font-bold text-fv-navy text-xl">Climbing Kingdom</h3>
+        <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed">Towering climbing walls, rope bridges, and a mega slide. The ultimate test of courage!</p>
+        <span class="mt-auto font-fredoka font-bold text-fv-navy text-sm">Explore →</span>
+      </div>
+
+      <div class="reveal-scale card-lift bg-fv-lime border-4 border-fv-navy shadow-cartoon rounded-3xl p-7 flex flex-col gap-3 tilt-pos-15" data-delay="70">
+        <div class="flex items-start justify-between gap-3">
+          <span class="bg-fv-pink border-2 border-fv-navy px-3 py-1 rounded-full font-nunito text-xs font-bold text-fv-navy flex-shrink-0">Ages 0–4</span>
+        </div>
+        <h3 class="font-fredoka font-bold text-fv-navy text-xl">Toddler Town</h3>
+        <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed">Soft foam pits, gentle slides, and squishy shapes — perfectly sized for little explorers.</p>
+        <span class="mt-auto font-fredoka font-bold text-fv-navy text-sm">Explore →</span>
+      </div>
+
+      <div class="reveal-scale card-lift bg-fv-pink border-4 border-fv-navy shadow-cartoon rounded-3xl p-7 flex flex-col gap-3 tilt-neg-2" data-delay="140">
+        <div class="flex items-start justify-between gap-3">
+          <span class="bg-fv-sky border-2 border-fv-navy px-3 py-1 rounded-full font-nunito text-xs font-bold text-fv-navy flex-shrink-0">All Ages</span>
+        </div>
+        <h3 class="font-fredoka font-bold text-fv-navy text-xl">Art Studio</h3>
+        <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed">Get messy! Painting, crafts, and creative workshops run throughout the day.</p>
+        <span class="mt-auto font-fredoka font-bold text-fv-navy text-sm">Explore →</span>
+      </div>
+
+      <div class="reveal-scale card-lift bg-white border-4 border-fv-navy shadow-cartoon rounded-3xl p-7 flex flex-col gap-3 tilt-pos-1" data-delay="0">
+        <div class="flex items-start justify-between gap-3">
+          <span class="bg-fv-lime border-2 border-fv-navy px-3 py-1 rounded-full font-nunito text-xs font-bold text-fv-navy flex-shrink-0">Ages 6–12</span>
+        </div>
+        <h3 class="font-fredoka font-bold text-fv-navy text-xl">Ninja Run</h3>
+        <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed">Obstacle courses, balance beams, and warp walls. Can you conquer the ultimate run?</p>
+        <span class="mt-auto font-fredoka font-bold text-fv-navy text-sm">Explore →</span>
+      </div>
+
+      <div class="reveal-scale card-lift bg-fv-sky border-4 border-fv-navy shadow-cartoon rounded-3xl p-7 flex flex-col gap-3 tilt-neg-15" data-delay="70">
+        <div class="flex items-start justify-between gap-3">
+          <span class="bg-fv-pink border-2 border-fv-navy px-3 py-1 rounded-full font-nunito text-xs font-bold text-fv-navy flex-shrink-0">Ages 3–10</span>
+        </div>
+        <h3 class="font-fredoka font-bold text-fv-navy text-xl">Drama Den</h3>
+        <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed">A mini theatre, costumes, and a stage. Every child deserves their moment in the spotlight.</p>
+        <span class="mt-auto font-fredoka font-bold text-fv-navy text-sm">Explore →</span>
+      </div>
+
+      <div class="reveal-scale card-lift bg-fv-lime border-4 border-fv-navy shadow-cartoon rounded-3xl p-7 flex flex-col gap-3 tilt-pos-05" data-delay="140">
+        <div class="flex items-start justify-between gap-3">
+          <span class="bg-fv-sky border-2 border-fv-navy px-3 py-1 rounded-full font-nunito text-xs font-bold text-fv-navy flex-shrink-0">Adults</span>
+        </div>
+        <h3 class="font-fredoka font-bold text-fv-navy text-xl">Parent Lounge</h3>
+        <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed">Real coffee, comfy seating with full sightlines, and free Wi-Fi. You're very welcome here.</p>
+        <span class="mt-auto font-fredoka font-bold text-fv-navy text-sm">Explore →</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bridge into Birthday (navy) -->
+  <div class="absolute bottom-0 left-0 right-0 pointer-events-none bridge-wrap" aria-hidden="true">
+    <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" class="w-full bridge-svg" preserveAspectRatio="none">
+      <path d="M0,100 L0,40 C180,80 360,20 540,55 C720,90 900,25 1080,58 C1260,91 1380,42 1440,50 L1440,100 Z" fill="#0A2D61"/>
+    </svg>
+    <div class="absolute animate-float"         style="bottom:1rem;left:20%;"><div class="w-16 h-16 rounded-full bg-fv-pink border-4 border-fv-navy shadow-cartoon"></div></div>
+    <div class="absolute animate-float delay-300" style="bottom:2rem;left:50%;transform:translateX(-50%);"><div class="w-20 h-20 rounded-full bg-fv-sky border-4 border-fv-navy shadow-cartoon"></div></div>
+    <div class="absolute animate-float delay-700" style="bottom:1rem;right:20%;"><div class="w-16 h-16 rounded-full bg-white border-4 border-fv-navy shadow-cartoon"></div></div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════
+     BIRTHDAY
+═════════════════════════════════════════════════════ -->
+<section id="birthday" class="relative overflow-hidden bg-birthday section-tall" aria-label="Birthday parties">
+
+  <!-- Confetti bits -->
+  <div class="absolute w-4 h-4 bg-fv-lime rounded-sm pointer-events-none animate-float confetti-1"></div>
+  <div class="absolute w-3 h-5 bg-fv-sky rounded-sm pointer-events-none animate-float delay-400 confetti-2"></div>
+  <div class="absolute w-5 h-3 bg-fv-lime rounded-sm pointer-events-none animate-float delay-200 confetti-3"></div>
+  <div class="absolute w-3 h-3 bg-white rounded-sm pointer-events-none animate-float delay-800 confetti-4"></div>
+  <div class="absolute w-4 h-4 bg-fv-sky rounded-sm pointer-events-none animate-float delay-1200 confetti-5"></div>
+  <div class="absolute w-3 h-5 bg-fv-lime rounded-sm pointer-events-none animate-float delay-600 confetti-6"></div>
+  <div class="absolute w-80 h-80 rounded-full border-[12px] pointer-events-none ring-lime" style="top:5rem;left:-6rem;" aria-hidden="true"></div>
+  <div class="absolute w-64 h-64 rounded-full border-[10px] pointer-events-none ring-pink" style="bottom:10rem;right:-5rem;" aria-hidden="true"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 mb-8">
+    <div class="text-center mb-16 reveal">
+      <span class="inline-block bg-fv-pink border-3 border-white shadow-cartoon-white px-5 py-2 rounded-full font-fredoka font-bold text-white text-sm mb-4">Birthday Parties</span>
+      <h2 class="font-fredoka font-bold text-white leading-tight heading-section">
+        Make Their Day <span class="text-fv-lime">Unforgettable</span>
+      </h2>
+      <p class="font-nunito text-white/75 mt-3 mx-auto max-w-lg">From intimate family gatherings to epic celebrations — we have a package for every dream birthday.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+      <!-- Starter -->
+      <div class="reveal card-lift bg-fv-sky border-4 border-fv-navy shadow-cartoon-lg rounded-3xl p-8 flex flex-col gap-4" data-delay="0">
+        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">Party Starter</h3>
+        <div class="font-fredoka font-bold text-fv-navy price-party">£249<span class="text-base font-nunito font-normal text-fv-navy/60 ml-1">/ party</span></div>
+        <ul class="flex flex-col gap-2 mt-1">
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> 2 hours exclusive play</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> 1 party room (up to 15 kids)</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Basic decorations</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Invites &amp; goodie bags</li>
+          <br>
+          <br>
+        </ul>
+        <a href="#book" class="mt-auto bg-fv-navy border-3 border-fv-navy shadow-cartoon-sm text-white font-fredoka font-bold px-6 py-3 rounded-full text-center btn-hover btn-lime block">Reserve</a>
+      </div>
+
+      <!-- Blowout (popular) -->
+      <div class="reveal card-lift bg-fv-lime border-4 border-fv-navy shadow-cartoon-lg rounded-3xl p-8 flex flex-col gap-4 relative md:-mt-4" data-delay="100">
+        <div class="absolute -top-5 left-1/2 -translate-x-1/2">
+          <span class="bg-fv-pink border-3 border-fv-navy shadow-cartoon-sm px-4 py-1.5 rounded-full font-fredoka font-bold text-white text-sm whitespace-nowrap animate-wiggle block">⭐ Most Popular</span>
+        </div>
+        <h3 class="font-fredoka font-bold text-fv-navy text-2xl mt-4">Birthday Blowout</h3>
+        <div class="font-fredoka font-bold text-fv-navy price-party">£449<span class="text-base font-nunito font-normal text-fv-navy/60 ml-1">/ party</span></div>
+        <ul class="flex flex-col gap-2 mt-1">
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> 3 hours exclusive play</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Large party room (up to 30 kids)</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Full decorations &amp; balloons</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Birthday cake included</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Dedicated party host</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Premium goodie bags</li>
+        </ul>
+        <a href="#book" class="mt-auto bg-fv-navy border-3 border-fv-navy shadow-cartoon-sm text-white font-fredoka font-bold px-6 py-3 rounded-full text-center btn-hover btn-lime block">Reserve</a>
+      </div>
+
+      <!-- VIP -->
+      <div class="reveal card-lift bg-fv-pink border-4 border-fv-navy shadow-cartoon-lg rounded-3xl p-8 flex flex-col gap-4" data-delay="200">
+        <h3 class="font-fredoka font-bold text-fv-navy text-2xl">VIP Superstar</h3>
+        <div class="font-fredoka font-bold text-fv-navy price-party">£699<span class="text-base font-nunito font-normal text-fv-navy/60 ml-1">/ party</span></div>
+        <ul class="flex flex-col gap-2 mt-1">
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> 4 hours exclusive play</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> VIP party suite</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Premium décor + photo wall</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Custom cake + catering</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Dedicated party team</li>
+          <li class="flex items-start gap-2 font-nunito text-fv-navy/80 text-sm"><span class="mt-0.5">✓</span> Live entertainment &amp; photos</li>
+        </ul>
+        <a href="#book" class="mt-auto bg-fv-navy border-3 border-fv-navy shadow-cartoon-sm text-white font-fredoka font-bold px-6 py-3 rounded-full text-center btn-hover btn-lime block">Reserve</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bridge into Pricing (sky) -->
+  <div class="absolute bottom-0 left-0 right-0 pointer-events-none bridge-wrap" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" class="w-full bridge-svg" preserveAspectRatio="none">
+      <path d="M0,80 L0,25 C240,60 480,10 720,38 C960,66 1200,18 1440,35 L1440,80 Z" fill="#63CCF5"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════
+     PRICING
+═════════════════════════════════════════════════════ -->
+<section id="pricing" class="relative overflow-hidden bg-fv-sky section-std bg-pricing-img" aria-label="Pricing">
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6">
+
+    <!-- Big playful heading -->
+    <div class="mb-16 reveal">
+      <h2 class="font-fredoka font-bold text-white heading-pricing">
+        Pricing
+      </h2>
+    </div>
+
+    <!-- Three cards — avatar overflows top of each card -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start pricing-grid">
+
+      <!-- Card 1 — 1-Hour Child -->
+      <div class="reveal-scale pricing-card pricing-card-shadow relative bg-white rounded-[2rem] text-center flex flex-col pt-16 pb-8 px-8 gap-4" data-delay="0">
+        <div class="pricing-avatar" style="background-image:url('img/funville_boy-1.png');">
+        </div>
+        <div class="font-fredoka font-bold text-fv-navy tracking-widest text-xs uppercase">1-Hour Entry</div>
+        <div class="font-fredoka font-bold text-fv-navy leading-none price-ticket">
+          €4.90<span class="font-nunito font-normal text-fv-navy/40 text-base">/child</span>
+        </div>
+        <div class="w-10 h-[3px] mx-auto rounded-full bg-fv-sky"></div>
+        <ul class="flex flex-col gap-2 text-left">
+          <li class="font-nunito text-fv-navy/55 text-sm">Each additional hour €4.90</li>
+          <li class="font-nunito text-fv-navy/55 text-sm">One adult entry included</li>
+        </ul>
+        <a href="#book" class="mt-2 font-fredoka font-bold text-white bg-fv-sky border-3 border-fv-navy shadow-cartoon-sm px-6 py-3 rounded-full block transition-all">Book Now</a>
+      </div>
+
+      <!-- Card 2 — 2-Hour Child (raised, Most Popular) -->
+      <div class="reveal-scale pricing-card pricing-card-featured relative bg-white rounded-[2rem] text-center flex flex-col pb-8 px-8 gap-4 md:-mt-4" data-delay="110">
+        <div class="pricing-avatar" style="background-image:url('img/funville_girl-1.png');">
+        </div>
+        <!-- Most Popular badge — inside card, below avatar space -->
+        <span class="self-center bg-fv-pink border-3 border-fv-navy shadow-cartoon-sm px-4 py-1 rounded-full font-fredoka font-bold text-white text-xs whitespace-nowrap animate-wiggle -mt-2">Most Popular</span>
+        <div class="font-fredoka font-bold text-fv-navy tracking-widest text-xs uppercase">2-Hour Entry</div>
+        <div class="font-fredoka font-bold text-fv-navy leading-none price-ticket">
+          €6.90<span class="font-nunito font-normal text-fv-navy/40 text-base">/child</span>
+        </div>
+        <div class="w-10 h-[3px] mx-auto rounded-full bg-fv-pink"></div>
+        <ul class="flex flex-col gap-2 text-left">
+          <li class="font-nunito text-fv-navy/55 text-sm">Each additional hour €1.90</li>
+          <li class="font-nunito text-fv-navy/55 text-sm">One adult entry included</li>
+        </ul>
+        <a href="#book" class="mt-2 font-fredoka font-bold text-white bg-fv-pink border-3 border-fv-navy shadow-cartoon-sm px-6 py-3 rounded-full block transition-all">Book Now</a>
+      </div>
+
+      <!-- Card 3 — Adult -->
+      <div class="reveal-scale pricing-card pricing-card-shadow relative bg-white rounded-[2rem] text-center flex flex-col pt-16 pb-8 px-8 gap-4" data-delay="220">
+        <div class="pricing-avatar" style="background-image:url('img/funville_adult-1.png');">
+        </div>
+        <div class="font-fredoka font-bold text-fv-navy tracking-widest text-xs uppercase">1-Hour Entry</div>
+        <div class="font-fredoka font-bold text-fv-navy leading-none price-ticket">
+          €1.50<span class="font-nunito font-normal text-fv-navy/40 text-base">/adult</span>
+        </div>
+        <div class="w-10 h-[3px] mx-auto rounded-full bg-fv-lime"></div>
+        <ul class="flex flex-col gap-2 text-left">
+          <li class="font-nunito text-fv-navy/55 text-sm">Each additional hour €1.50</li>
+          <li class="font-nunito text-fv-navy/55 text-sm">&nbsp;</li>
+        </ul>
+        <a href="#book" class="mt-2 font-fredoka font-bold text-fv-navy bg-fv-lime border-3 border-fv-navy shadow-cartoon-sm px-6 py-3 rounded-full block transition-all">Book Now</a>
+      </div>
+
+    </div>
+
+    <!-- Bottom note -->
+    <div class="reveal mt-14 text-center" data-delay="320">
+      <p class="font-nunito text-white/70 text-sm">
+        Gift vouchers from €20 &nbsp;·&nbsp; Group discounts for 10+ kids &nbsp;·&nbsp; Under 2s always free
+      </p>
+    </div>
+  </div>
+
+  <!-- Bridge into Parents (white) -->
+  <div class="absolute bottom-0 left-0 right-0 pointer-events-none bridge-wrap" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" class="w-full bridge-svg" preserveAspectRatio="none">
+      <path d="M0,60 L0,20 C480,55 960,5 1440,28 L1440,60 Z" fill="white"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════
+     FOR PARENTS
+═════════════════════════════════════════════════════ -->
+<section class="relative bg-white overflow-hidden section-std" aria-label="For parents">
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16 reveal">
+      <span class="inline-block bg-fv-sky border-3 border-fv-navy shadow-cartoon-sm px-5 py-2 rounded-full font-fredoka font-bold text-fv-navy text-sm mb-4">For Parents</span>
+      <h2 class="font-fredoka font-bold text-fv-navy leading-tight heading-section">
+        You'll Love It <span class="text-fv-sky">Here Too</span>
+      </h2>
+      <p class="font-nunito text-fv-navy/65 mt-3 mx-auto max-w-lg">We've designed FunVille so parents feel as welcome as the kids. Because your comfort matters just as much.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+      <div class="flex flex-col gap-5">
+        <div class="reveal reveal-left flex items-start gap-4" data-delay="0">
+          <img src="img/espresso_funville.png" alt="Coffee at FunVille café" class="w-16 h-16 object-contain flex-shrink-0 rounded-2xl border-3 border-fv-navy shadow-cartoon-sm bg-fv-lime" loading="lazy" />
+          <div>
+            <h3 class="font-fredoka font-bold text-fv-navy text-xl mb-1">Real Coffee & Café</h3>
+            <p class="font-nunito text-fv-navy/65 text-sm leading-relaxed">Proper espresso, fresh food, and light snacks. Sit back and watch the action from our comfortable lounge seating.</p>
+          </div>
+        </div>
+        <div class="reveal reveal-left flex items-start gap-4" data-delay="80">
+          <div class="w-14 h-14 rounded-2xl bg-fv-sky border-3 border-fv-navy shadow-cartoon-sm flex items-center justify-center font-fredoka font-bold text-fv-navy text-xl flex-shrink-0">S</div>
+          <div>
+            <h3 class="font-fredoka font-bold text-fv-navy text-xl mb-1">Full Sightlines</h3>
+            <p class="font-nunito text-fv-navy/65 text-sm leading-relaxed">Every seat in the parent lounge has a clear view of all play zones. You'll never wonder where your child is.</p>
+          </div>
+        </div>
+        <div class="reveal reveal-left flex items-start gap-4" data-delay="160">
+          <div class="w-14 h-14 rounded-2xl bg-fv-pink border-3 border-fv-navy shadow-cartoon-sm flex items-center justify-center font-fredoka font-bold text-fv-navy text-xl flex-shrink-0">W</div>
+          <div>
+            <h3 class="font-fredoka font-bold text-fv-navy text-xl mb-1">Free Wi-Fi</h3>
+            <p class="font-nunito text-fv-navy/65 text-sm leading-relaxed">Fast, reliable connection. Catch up on work, stream something, or just enjoy a quiet moment while the kids play.</p>
+          </div>
+        </div>
+        <div class="reveal reveal-left flex items-start gap-4" data-delay="240">
+          <div class="w-14 h-14 rounded-2xl bg-fv-lime border-3 border-fv-navy shadow-cartoon-sm flex items-center justify-center font-fredoka font-bold text-fv-navy text-xl flex-shrink-0">B</div>
+          <div>
+            <h3 class="font-fredoka font-bold text-fv-navy text-xl mb-1">Baby Facilities</h3>
+            <p class="font-nunito text-fv-navy/65 text-sm leading-relaxed">Changing rooms, a private feeding area, steriliser station, and stroller parking. We've thought of everything.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Big trust card -->
+      <div class="reveal reveal-right" data-delay="100">
+        <div class="bg-fv-navy border-4 border-fv-navy shadow-cartoon-lg rounded-3xl p-10 text-white flex flex-col gap-6">
+          <h3 class="font-fredoka font-bold text-3xl">Safety You Can See</h3>
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center gap-3 bg-white/10 rounded-2xl px-4 py-3">
+              <span class="font-fredoka font-bold text-fv-lime text-lg">✓</span>
+              <span class="font-nunito text-sm text-white/90">DBS-checked staff, always present</span>
+            </div>
+            <div class="flex items-center gap-3 bg-white/10 rounded-2xl px-4 py-3">
+              <span class="font-fredoka font-bold text-fv-lime text-lg">✓</span>
+              <span class="font-nunito text-sm text-white/90">Fully padded & age-separated zones</span>
+            </div>
+            <div class="flex items-center gap-3 bg-white/10 rounded-2xl px-4 py-3">
+              <span class="font-fredoka font-bold text-fv-lime text-lg">✓</span>
+              <span class="font-nunito text-sm text-white/90">Hourly hygiene sanitisation rounds</span>
+            </div>
+            <div class="flex items-center gap-3 bg-white/10 rounded-2xl px-4 py-3">
+              <span class="font-fredoka font-bold text-fv-lime text-lg">✓</span>
+              <span class="font-nunito text-sm text-white/90">Single entry/exit point for security</span>
+            </div>
+          </div>
+          <a href="#faq" class="font-fredoka font-bold text-fv-navy bg-fv-lime border-3 border-white shadow-cartoon-white px-6 py-3 rounded-full text-center btn-hover btn-lime block">Read Our Safety Policy →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bridge into Testimonials (navy) -->
+  <div class="absolute bottom-0 left-0 right-0 pointer-events-none bridge-wrap-plain" aria-hidden="true">
+    <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" class="w-full bridge-svg-plain" preserveAspectRatio="none">
+      <path d="M0,70 L0,22 C360,60 720,8 1080,40 C1260,56 1380,25 1440,32 L1440,70 Z" fill="#0A2D61"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════
+     TESTIMONIALS
+═════════════════════════════════════════════════════ -->
+<section class="relative overflow-hidden bg-fv-navy section-mid" aria-label="Testimonials">
+
+  <div class="absolute top-12 left-[-80px] w-72 h-72 rounded-full border-[10px] pointer-events-none ring-sky" aria-hidden="true"></div>
+  <div class="absolute bottom-20 right-[-60px] w-56 h-56 rounded-full border-[8px] pointer-events-none ring-lime" aria-hidden="true"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16 reveal">
+      <span class="inline-block bg-fv-lime border-3 border-fv-navy shadow-cartoon-sm px-5 py-2 rounded-full font-fredoka font-bold text-fv-navy text-sm mb-4">Happy Families</span>
+      <h2 class="font-fredoka font-bold text-white leading-tight heading-section">
+        What Parents Are <span class="text-fv-pink">Saying</span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <div class="reveal-scale card-lift bg-white border-4 border-fv-sky shadow-cartoon-sky rounded-3xl p-7 flex flex-col gap-4 tilt-neg-15" data-delay="0">
+        <div class="flex gap-0.5 text-fv-lime text-xl">★★★★★</div>
+        <p class="font-nunito text-fv-navy/80 text-sm leading-relaxed italic">"Our daughter talks about FunVille non-stop. The staff are incredible, the place is spotless, and the birthday party they hosted was the best we've ever had!"</p>
+        <div class="mt-auto flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-fv-sky border-2 border-fv-navy flex items-center justify-center font-fredoka font-bold text-fv-navy">S</div>
+          <div>
+            <div class="font-fredoka font-bold text-fv-navy text-sm">Sarah M.</div>
+            <div class="font-nunito text-fv-navy/50 text-xs">Mum of 2</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal-scale card-lift bg-fv-lime border-4 border-fv-navy shadow-cartoon rounded-3xl p-7 flex flex-col gap-4 tilt-pos-1" data-delay="100">
+        <div class="flex gap-0.5 text-fv-navy text-xl">★★★★★</div>
+        <p class="font-nunito text-fv-navy/80 text-sm leading-relaxed italic">"Best rainy-day spot in the city. The café is genuinely good, the Wi-Fi works perfectly, and I can see the kids from my seat the whole time. 10/10."</p>
+        <div class="mt-auto flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-fv-pink border-2 border-fv-navy flex items-center justify-center font-fredoka font-bold text-white">J</div>
+          <div>
+            <div class="font-fredoka font-bold text-fv-navy text-sm">James K.</div>
+            <div class="font-nunito text-fv-navy/50 text-xs">Dad of 3</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal-scale card-lift bg-fv-pink border-4 border-fv-navy shadow-cartoon rounded-3xl p-7 flex flex-col gap-4 tilt-neg-05" data-delay="200">
+        <div class="flex gap-0.5 text-fv-lime text-xl">★★★★★</div>
+        <p class="font-nunito text-fv-navy/80 text-sm leading-relaxed italic">"We've tried every playground in the area. FunVille is in a league of its own. Clean, safe, and the kids never want to leave. Our new weekly tradition!"</p>
+        <div class="mt-auto flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-fv-lime border-2 border-fv-navy flex items-center justify-center font-fredoka font-bold text-fv-navy">P</div>
+          <div>
+            <div class="font-fredoka font-bold text-fv-navy text-sm">Priya L.</div>
+            <div class="font-nunito text-fv-navy/50 text-xs">Mum of 1</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bridge into FAQ (sky-light) -->
+  <div class="absolute bottom-0 left-0 right-0 pointer-events-none bridge-wrap-plain" aria-hidden="true">
+    <svg viewBox="0 0 1440 65" xmlns="http://www.w3.org/2000/svg" class="w-full bridge-svg-plain" preserveAspectRatio="none">
+      <path d="M0,65 L0,20 C480,58 960,8 1440,35 L1440,65 Z" fill="#EAF7FE"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════
+     FAQ
+═════════════════════════════════════════════════════ -->
+<section id="faq" class="relative bg-fv-sky-light overflow-hidden section-std" aria-label="FAQ">
+
+  <div class="absolute top-12 right-[-60px] w-64 h-64 rounded-full bg-fv-sky/30 pointer-events-none" aria-hidden="true"></div>
+
+  <div class="relative z-10 max-w-3xl mx-auto px-6">
+    <div class="text-center mb-14 reveal">
+      <span class="inline-block bg-fv-sky border-3 border-fv-navy shadow-cartoon-sm px-5 py-2 rounded-full font-fredoka font-bold text-fv-navy text-sm mb-4">Got Questions?</span>
+      <h2 class="font-fredoka font-bold text-fv-navy leading-tight heading-section">
+        Quick <span class="text-fv-pink">Answers</span>
+      </h2>
+    </div>
+
+    <div class="flex flex-col gap-4" id="faq-list">
+
+      <div class="reveal faq-item bg-white border-4 border-fv-navy shadow-cartoon rounded-2xl overflow-hidden" data-delay="0">
+        <button class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-fredoka font-bold text-fv-navy text-lg">Do I need to book in advance?</span>
+          <span class="faq-arrow text-fv-navy text-xl font-bold flex-shrink-0">▾</span>
+        </button>
+        <div class="faq-body px-6">
+          <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed pb-5">Walk-ins are welcome but we recommend booking online to guarantee your slot, especially at weekends and during school holidays. Booking takes less than 2 minutes!</p>
+        </div>
+      </div>
+
+      <div class="reveal faq-item bg-fv-lime border-4 border-fv-navy shadow-cartoon rounded-2xl overflow-hidden" data-delay="60">
+        <button class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-fredoka font-bold text-fv-navy text-lg">What ages is FunVille suitable for?</span>
+          <span class="faq-arrow text-fv-navy text-xl font-bold flex-shrink-0">▾</span>
+        </button>
+        <div class="faq-body px-6">
+          <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed pb-5">FunVille is designed for children aged 0–12. We have a dedicated Toddler Town for under-4s with soft, safe equipment, and bigger zones for older adventurers. Under-2s are free!</p>
+        </div>
+      </div>
+
+      <div class="reveal faq-item bg-fv-sky border-4 border-fv-navy shadow-cartoon rounded-2xl overflow-hidden" data-delay="120">
+        <button class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-fredoka font-bold text-fv-navy text-lg">What should kids wear?</span>
+          <span class="faq-arrow text-fv-navy text-xl font-bold flex-shrink-0">▾</span>
+        </button>
+        <div class="faq-body px-6">
+          <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed pb-5">Comfortable clothes and grip socks are required for all children. Grip socks are available to purchase at reception for £2.50 if you forget yours. Adults must remove shoes before entering play zones.</p>
+        </div>
+      </div>
+
+      <div class="reveal faq-item bg-white border-4 border-fv-navy shadow-cartoon rounded-2xl overflow-hidden" data-delay="180">
+        <button class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-fredoka font-bold text-fv-navy text-lg">Can I bring my own food?</span>
+          <span class="faq-arrow text-fv-navy text-xl font-bold flex-shrink-0">▾</span>
+        </button>
+        <div class="faq-body px-6">
+          <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed pb-5">You're welcome to bring snacks and drinks for children. We ask that you eat in the café area, not in the play zones. Our café also serves freshly made food and snacks at great prices.</p>
+        </div>
+      </div>
+
+      <div class="reveal faq-item bg-fv-pink border-4 border-fv-navy shadow-cartoon rounded-2xl overflow-hidden" data-delay="240">
+        <button class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-fredoka font-bold text-fv-navy text-lg">How do I book a birthday party?</span>
+          <span class="faq-arrow text-fv-navy text-xl font-bold flex-shrink-0">▾</span>
+        </button>
+        <div class="faq-body px-6">
+          <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed pb-5">Simply pick a package above and click Reserve, or contact our party team directly at parties@funville.co. We recommend booking at least 4 weeks in advance for weekend dates. A 25% deposit secures your booking.</p>
+        </div>
+      </div>
+
+      <div class="reveal faq-item bg-fv-lime border-4 border-fv-navy shadow-cartoon rounded-2xl overflow-hidden" data-delay="300">
+        <button class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-fredoka font-bold text-fv-navy text-lg">Is there parking?</span>
+          <span class="faq-arrow text-fv-navy text-xl font-bold flex-shrink-0">▾</span>
+        </button>
+        <div class="faq-body px-6">
+          <p class="font-nunito text-fv-navy/70 text-sm leading-relaxed pb-5">Yes! Free parking is available directly adjacent to FunVille with 80 spaces including 6 accessible bays. We're also a 5-minute walk from the town centre bus stops.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bridge into CTA (pink) -->
+  <div class="absolute bottom-0 left-0 right-0 pointer-events-none bridge-wrap-plain" aria-hidden="true">
+    <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" class="w-full bridge-svg-plain" preserveAspectRatio="none">
+      <path d="M0,70 L0,15 C360,55 720,5 1080,38 C1260,54 1380,22 1440,30 L1440,70 Z" fill="#EC508C"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════
+     FINAL CTA
+═════════════════════════════════════════════════════ -->
+<section id="book" class="relative overflow-hidden bg-fv-pink section-tall" aria-label="Book now">
+
+  <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
+    <div class="reveal">
+      <h2 class="font-fredoka font-bold text-white leading-tight mb-4 heading-cta">
+        Ready for the<br><span class="text-fv-lime">Best Day Ever?</span>
+      </h2>
+      <p class="font-nunito text-white/80 text-lg mb-10 max-w-lg mx-auto">
+        Book your visit today and give your family a day full of laughter, adventure, and unforgettable memories.
+      </p>
+      <div class="flex flex-wrap gap-5 justify-center">
+        <a href="#contact" class="font-fredoka font-bold text-white bg-fv-navy border-4 border-white shadow-cartoon-white text-xl px-10 py-4 rounded-full inline-flex items-center gap-2 btn-hover btn-pink">
+          Book a Visit
+        </a>
+        <a href="#birthday" class="font-fredoka font-bold text-fv-navy bg-white border-4 border-fv-navy shadow-cartoon text-xl px-10 py-4 rounded-full inline-flex items-center gap-2 btn-hover btn-white">
+          Plan a Birthday
+        </a>
+        <a href="#contact" class="font-fredoka font-bold text-fv-navy bg-fv-lime border-4 border-fv-navy shadow-cartoon-lime text-xl px-10 py-4 rounded-full inline-flex items-center gap-2 btn-hover btn-lime">
+          Gift Voucher
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bridge into Footer (navy) -->
+  <div class="absolute bottom-0 left-0 right-0 pointer-events-none bridge-wrap-plain" aria-hidden="true">
+    <svg viewBox="0 0 1440 55" xmlns="http://www.w3.org/2000/svg" class="w-full bridge-svg-plain" preserveAspectRatio="none">
+      <path d="M0,55 L0,15 C480,50 960,5 1440,28 L1440,55 Z" fill="#0A2D61"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════
+     FOOTER
+═════════════════════════════════════════════════════ -->
+<footer id="contact" class="relative bg-fv-navy overflow-hidden section-footer" aria-label="Footer">
+
+  <div class="absolute top-10 right-[-60px] w-56 h-56 rounded-full border-[8px] pointer-events-none ring-sky-faint" aria-hidden="true"></div>
+
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-14 border-b-2 border-white/10">
+
+      <!-- Brand -->
+      <div class="lg:col-span-1">
+        <div class="mb-4">
+          <img src="img/funville_logo_R_dominik.png" alt="FunVille" class="h-12 w-auto brightness-0 invert" />
+        </div>
+        <p class="font-nunito text-white/60 text-sm leading-relaxed mb-5">The ultimate indoor playground experience for the whole family. Come rain or shine.</p>
+        <div class="flex gap-3">
+          <a href="#" class="w-10 h-10 rounded-full bg-white/10 border-2 border-white/20 flex items-center justify-center text-white hover:bg-fv-pink transition-colors font-bold text-sm" aria-label="Facebook">f</a>
+          <a href="#" class="w-10 h-10 rounded-full bg-white/10 border-2 border-white/20 flex items-center justify-center text-white hover:bg-fv-pink transition-colors font-bold text-sm" aria-label="Instagram">ig</a>
+          <a href="#" class="w-10 h-10 rounded-full bg-white/10 border-2 border-white/20 flex items-center justify-center text-white hover:bg-fv-pink transition-colors font-bold text-sm" aria-label="TikTok">tt</a>
+        </div>
+      </div>
+
+      <!-- Quick links -->
+      <div>
+        <h4 class="font-fredoka font-bold text-white text-lg mb-4">Quick Links</h4>
+        <ul class="flex flex-col gap-2">
+          <li><a href="#zones"    class="font-nunito text-white/60 text-sm hover:text-fv-lime transition-colors">Play Zones</a></li>
+          <li><a href="#birthday" class="font-nunito text-white/60 text-sm hover:text-fv-lime transition-colors">Birthday Parties</a></li>
+          <li><a href="#pricing"  class="font-nunito text-white/60 text-sm hover:text-fv-lime transition-colors">Pricing &amp; Tickets</a></li>
+          <li><a href="#contact"  class="font-nunito text-white/60 text-sm hover:text-fv-lime transition-colors">Gift Vouchers</a></li>
+          <li><a href="#faq"      class="font-nunito text-white/60 text-sm hover:text-fv-lime transition-colors">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Visit -->
+      <div>
+        <h4 class="font-fredoka font-bold text-white text-lg mb-4">Visit Us</h4>
+        <img src="img/funville_kontakt.png" alt="FunVille contact details — phone, email, address" class="w-full max-w-xs rounded-2xl mb-3" loading="lazy" />
+        <ul class="flex flex-col gap-2">
+          <li class="flex items-start gap-2">
+            <span class="font-nunito text-white/60 text-sm">Mon–Fri: 9am – 6pm<br>Sat–Sun: 8:30am – 7pm</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h4 class="font-fredoka font-bold text-white text-lg mb-4">Stay in the Loop</h4>
+        <p class="font-nunito text-white/60 text-sm mb-4">Get exclusive offers, event news, and birthday discounts.</p>
+        <form class="flex flex-col gap-3" onsubmit="return false;">
+          <input
+            type="email"
+            placeholder="your@email.com"
+            class="w-full bg-white/10 border-2 border-white/20 text-white placeholder-white/40 px-4 py-3 rounded-2xl font-nunito text-sm focus:outline-none focus:border-fv-lime transition-colors"
+          />
+          <button
+            type="submit"
+            class="bg-fv-lime border-3 border-white shadow-cartoon-white text-fv-navy font-fredoka font-bold px-5 py-3 rounded-full btn-hover btn-lime"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-3 py-6">
+      <p class="font-nunito text-white/40 text-xs">© 2026 FunVille Indoor Playground. All rights reserved.</p>
+      <div class="flex gap-5">
+        <a href="#" class="font-nunito text-white/40 text-xs hover:text-white/70 transition-colors">Privacy Policy</a>
+        <a href="#" class="font-nunito text-white/40 text-xs hover:text-white/70 transition-colors">Terms of Use</a>
+        <a href="#" class="font-nunito text-white/40 text-xs hover:text-white/70 transition-colors">Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ════════════════════════════════════════════════════
+     JAVASCRIPT
+═════════════════════════════════════════════════════ -->
+<script src="js/main.js" defer></script>
+
+</body>
+</html>
